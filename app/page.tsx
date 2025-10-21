@@ -19,46 +19,46 @@ interface ProcessStep {
 const processSteps: ProcessStep[] = [
   {
     id: 1,
-    title: "Clarity Call",
+    title: "Discovery Session",
     description:
-      "During this call we see if you're ready to build. We'll go through the problem you're solving, validate your idea, and uncover any missing gaps before starting.",
+      "We begin with a comprehensive discussion about your research objectives. I'll examine your data, understand your academic requirements, and determine the best analytical approach for your project.",
     points: [
-      "Understand your project goals and expectations",
-      "Identify data sources and requirements",
-      "Clarify timelines and expected outcomes",
+      "Explore your research questions and hypotheses",
+      "Evaluate your dataset structure and quality",
+      "Define project scope and deliverable expectations",
     ],
   },
   {
     id: 2,
-    title: "Strategy & Proposal",
+    title: "Analysis Blueprint",
     description:
-      "In this strategy session, I'll align with your vision, map the analysis plan, document requirements, and prepare a detailed proposal with clear deliverables.",
+      "I develop a customized analysis framework specifically for your study. This includes selecting appropriate statistical methods, planning visualizations, and creating a detailed project roadmap.",
     points: [
-      "Build a step-by-step research or analysis roadmap",
-      "Estimate resources and milestones",
-      "Deliver a transparent proposal with timelines",
+      "Design statistical testing methodology",
+      "Create comprehensive analysis timeline",
+      "Provide detailed cost breakdown and milestones",
     ],
   },
   {
     id: 3,
-    title: "Execution",
+    title: "Data Processing",
     description:
-      "I'll build your analysis or product with weekly check-ins to stay aligned. You'll have access to live progress and regular updates.",
+      "I conduct thorough statistical analysis using professional software like SPSS, R, or Python. You'll receive regular progress updates and can request modifications throughout the process.",
     points: [
-      "Weekly feedback sessions and milestone updates",
-      "Track live progress through shared dashboards",
-      "Collaborate openly throughout the process",
+      "Perform data cleaning and preparation",
+      "Execute statistical tests and modeling",
+      "Generate professional charts and visualizations",
     ],
   },
   {
     id: 4,
-    title: "Refinement & Launch",
+    title: "Final Delivery",
     description:
-      "Project complete. You'll review, request any changes, and approve. After the final delivery, we launch together. Optional ongoing support is available.",
+      "You receive a comprehensive analysis report with clear interpretations, professional visualizations, and complete documentation. I provide revisions if needed and ongoing support for your defense.",
     points: [
-      "Dedicated review before final approval",
-      "Launch once you're 100% ready",
-      "Optional monthly support for maintenance or scaling",
+      "Comprehensive results with detailed explanations",
+      "Professional report ready for submission",
+      "Free revisions and defense preparation support",
     ],
   },
 ];
@@ -76,11 +76,11 @@ const ProcessSection: React.FC = () => {
         <div className="text-center mb-16">
           <p className="text-gray-500 italic mb-2">Process</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            From Ideas to Working Solutions
+            How I Transform Your Data Into Results
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            From clarifying your ideas, setting up build strategies, execution,
-            and launch — this is how it looks like.
+            My proven methodology takes you from raw data confusion to crystal-clear academic insights,
+            ensuring your research stands out with professional statistical analysis.
           </p>
         </div>
 
@@ -1068,6 +1068,7 @@ export default function Home() {
   ))}
 </section>
 
+      <ProcessSection />
 
  {/* Academic Programs Section - Refined with Side Tag */}
 <section className="relative bg-gradient-to-b from-gray-50 via-white to-gray-100 py-24 overflow-hidden">
@@ -1373,4 +1374,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  );}
+  );
+}

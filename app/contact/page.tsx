@@ -175,7 +175,7 @@ export default function Contact() {
                 {['firstName', 'lastName'].map((f, i) => (
                   <div key={i}>
                     <label className="block font-semibold mb-2 capitalize">{f.replace(/Name/, ' Name ')} *</label>
-                    <input type="text" name={f} required value={formData[f]}
+                    <input type="text" name={f} required value={formData[f as keyof typeof formData] as string}
                       onChange={handleInputChange}
                       className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-700 outline-none transition-all"
                       placeholder={`Your ${f.replace(/Name/, ' name ')}`} />

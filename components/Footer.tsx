@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center mb-4">
-              <span className="text-3xl font-bold gradient-text">TatsTech</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">TatsTech</span>
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">
               Professional data science and analytics solutions for undergraduate and master's students. 
@@ -63,15 +63,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
-                <Phone size={16} className="text-accent-500" />
+                <Phone size={16} className="text-green-600" />
                 <span className="text-gray-600">+263 771 186 558</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail size={16} className="text-accent-500" />
+                <Mail size={16} className="text-green-600" />
                 <span className="text-gray-600">tatendatatenda1112@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin size={16} className="text-accent-500 mt-1" />
+                <MapPin size={16} className="text-green-600 mt-1" />
                 <span className="text-gray-600">Available Online & Face-to-Face</span>
               </li>
             </ul>

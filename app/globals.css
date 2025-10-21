@@ -26,8 +26,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* Android-specific optimizations */
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  font-variant-ligatures: none;
+  /* text-size-adjust: 100%; - Removed for compatibility */
+  /* font-variant-ligatures: none; - Removed for compatibility */
 }
 
 /* Android Chrome specific optimizations */
@@ -200,7 +200,9 @@ p {
 }
 
 .text-balance {
-  text-wrap: balance;
+  /* text-wrap: balance; - Not widely supported, using alternative */
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Clean links */
