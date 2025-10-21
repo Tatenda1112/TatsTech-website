@@ -840,7 +840,10 @@ export default function Home() {
           className="w-80 h-96 object-cover rounded-2xl shadow-2xl mx-auto border border-gray-200"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
-            e.currentTarget.nextElementSibling.style.display = 'flex';
+            const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+            if (nextElement) {
+              nextElement.style.display = 'flex';
+            }
           }}
         />
         {/* Fallback Avatar */}
