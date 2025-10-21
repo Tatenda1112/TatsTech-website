@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
+import useEmblaCarousel, { UseEmblaCarouselType } from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useEffect, useState, useCallback } from 'react'
 import {
