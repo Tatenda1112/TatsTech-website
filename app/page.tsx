@@ -276,14 +276,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
               <Link 
                 href="/contact" 
-                className="group relative bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="group relative bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 min-h-[52px] flex items-center justify-center touch-manipulation"
               >
                 <span className="relative z-10">Book a Clarity Call</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-emerald-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link 
                 href="#how-i-work" 
-                className="group bg-white/80 backdrop-blur-sm text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-white transition-all duration-300 text-center border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md"
+                className="group bg-white/80 backdrop-blur-sm text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-white transition-all duration-300 text-center border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md min-h-[52px] flex items-center justify-center touch-manipulation"
               >
                 See How I Work
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>

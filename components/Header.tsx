@@ -51,7 +51,9 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="md:hidden p-3 rounded-md text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 min-h-[48px] min-w-[48px] flex items-center justify-center touch-manipulation"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -60,38 +62,38 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-2">
               <Link 
                 href="/" 
-                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors py-3 px-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 min-h-[48px] flex items-center touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/services" 
-                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors py-3 px-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 min-h-[48px] flex items-center touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 href="/blog" 
-                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors py-3 px-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 min-h-[48px] flex items-center touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
               <Link 
                 href="/about" 
-                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors py-3 px-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 min-h-[48px] flex items-center touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 href="/contact" 
-                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors py-3 px-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 min-h-[48px] flex items-center touch-manipulation"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
@@ -103,7 +105,7 @@ const Header = () => {
                 </div>
                 <Link 
                   href="/contact" 
-                  className="block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-center"
+                  className="block bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 transition-colors text-center min-h-[48px] flex items-center justify-center touch-manipulation font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started
