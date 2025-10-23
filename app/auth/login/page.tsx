@@ -39,23 +39,22 @@ export default function LoginPage() {
       const result = await signIn('credentials', {
         email,
         password,
-        redirect: false,
+        callbackUrl: callbackUrl,
+        redirect: true,
       });
 
       console.log('Login result:', result);
 
+      // If redirect is true, NextAuth will handle the redirect automatically
+      // This code will only run if there's an error
       if (result?.error) {
         console.error('Login error:', result.error);
         setError('Invalid email or password');
-      } else if (result?.ok) {
-        console.log('Login successful, redirecting...');
-        router.push(callbackUrl);
-        router.refresh();
+        setIsLoading(false);
       }
     } catch (error) {
       console.error('Login exception:', error);
       setError('An error occurred. Please try again.');
-    } finally {
       setIsLoading(false);
     }
   };

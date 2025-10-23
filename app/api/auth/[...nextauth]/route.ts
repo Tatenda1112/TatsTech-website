@@ -17,7 +17,7 @@ const handler = NextAuth({
 
         if (!credentials?.email || !credentials?.password) {
           console.log('Missing credentials');
-          return null
+          throw new Error('Missing credentials')
         }
 
         // Check against hardcoded credentials for security
@@ -44,7 +44,7 @@ const handler = NextAuth({
         }
 
         console.log('Authentication failed');
-        return null
+        throw new Error('Invalid credentials')
       }
     })
   ],
@@ -68,6 +68,14 @@ const handler = NextAuth({
         ;(session.user as any).role = token.role as string
       }
       return session
+    },
+    async redirect({ url, baseUrl }) {
+      // Always redirect to admin dashboard after successful login
+      if (url.startsWith('/')) return `${baseUrl}${url}`
+      // If callback URL is on same origin, allow it
+      else if (new URL(url).origin === baseUrl) return url
+      // Otherwise redirect to admin dashboard
+      return `${baseUrl}/admin/dashboard`
     }
   },
   pages: {
@@ -75,6 +83,7 @@ const handler = NextAuth({
     error: '/auth/error',
   },
   secret: process.env.NEXTAUTH_SECRET,
+  debug: process.env.NODE_ENV === 'development',
 })
 
 export { handler as GET, handler as POST }

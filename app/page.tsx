@@ -564,453 +564,658 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STUDENT CHALLENGES SECTION – REFINED VERSION */}
-<section className="relative bg-gradient-to-b from-gray-50 via-white to-gray-100 py-28 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
-
-    {/* LEFT COLUMN */}
-    <div className="space-y-6">
-      {/* Card 1 */}
+      {/* REVISED STUDENT CHALLENGES SECTION - TOP ALIGNED & DIFFERENT DESIGN */}
+<section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-32 overflow-hidden">
+  <div className="max-w-8xl mx-auto px-6">
+    
+    {/* HEADER SECTION - Now at the top */}
+    <div className="text-center mb-20">
       <motion.div 
-        className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-        whileHover={{ y: -4 }}
+        className="inline-flex items-center gap-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 px-6 py-3 rounded-full text-sm font-semibold mb-8 border border-gray-200 shadow-sm"
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-gray-200 bg-white flex items-center justify-center">
-            {/* Folder Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7a2 2 0 012-2h5l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-1">Data Chaos</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Students often collect excellent data but struggle to organize, clean, and structure it for analysis — losing precious time before submission.
-            </p>
-          </div>
-        </div>
+        <span className="w-3 h-3 bg-gradient-to-r from-gray-600 to-gray-800 rounded-full animate-pulse"></span>
+        Student Challenges • Real Solutions
       </motion.div>
-
-      {/* Card 2 */}
-      <motion.div 
-        className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-        whileHover={{ y: -4 }}
-      >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-gray-200 bg-white flex items-center justify-center">
-            {/* Confused Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M16 10h.01M12 14h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-1">Tool Overload</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              “Should I use SPSS or R?” “Do I need Python?” — students get lost switching tools without clear guidance on the right one for their study.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Card 3 */}
-      <motion.div 
-        className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-        whileHover={{ y: -4 }}
-      >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-gray-200 bg-white flex items-center justify-center">
-            {/* Equation Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5v14" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-1">Statistical Confusion</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Hypothesis testing, p-values, correlation — many students feel uncertain about which tests fit their research design.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-
-    {/* CENTER COLUMN */}
-    <div className="text-center relative">
-      <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-        <span className="w-2 h-2 bg-gray-700 rounded-full animate-pulse"></span>
-        Challenges Faced by Students
-      </div>
 
       <motion.h2 
-        className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6"
+        className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.7 }}
       >
-        I Understand <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-          What You’re Going Through
+        I Understand Your <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 relative">
+          Academic Struggles
+          <div className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full"></div>
         </span>
       </motion.h2>
 
       <motion.p 
-        className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-md mx-auto"
+        className="text-gray-600 text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+      >
+        From unclear supervisor feedback to tight submission deadlines — I've guided hundreds of students through 
+        frustration, burnout, and confusion during research analysis. That's exactly why this service exists — 
+        to simplify your academic journey.
+      </motion.p>
+    </div>
+
+    {/* ENHANCED CARDS GRID - New Layout */}
+    <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      {/* Column 1 */}
+      <div className="space-y-8">
+        {/* Data Chaos Card */}
+        <motion.div 
+          className="group relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+          whileHover={{ y: -6, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-gray-400 to-gray-300"></div>
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7a2 2 0 012-2h5l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-bold text-gray-900 text-xl leading-tight">Data Chaos</h3>
+                <span className="text-xs font-medium bg-red-100 text-red-600 px-2 py-1 rounded-full">Common</span>
+              </div>
+              <p className="text-gray-600 text-base leading-relaxed">
+                Students often collect excellent data but struggle to organize, clean, and structure it for analysis — losing precious time before submission deadlines.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Statistical Confusion Card */}
+        <motion.div 
+          className="group relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+          whileHover={{ y: -6, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-gray-400 to-gray-300"></div>
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8l4-4m0 0l4 4m-4-4v16m8-8h.01M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-bold text-gray-900 text-xl leading-tight">Statistical Confusion</h3>
+                <span className="text-xs font-medium bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">Critical</span>
+              </div>
+              <p className="text-gray-600 text-base leading-relaxed">
+                Hypothesis testing, p-values, correlation — many students feel uncertain about which statistical tests properly fit their research design and data type.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Column 2 */}
+      <div className="space-y-8">
+        {/* Tool Overload Card */}
+        <motion.div 
+          className="group relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+          whileHover={{ y: -6, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-gray-400 to-gray-300"></div>
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M16 10h.01M12 14h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-bold text-gray-900 text-xl leading-tight">Tool Overload</h3>
+                <span className="text-xs font-medium bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Frequent</span>
+              </div>
+              <p className="text-gray-600 text-base leading-relaxed">
+                "Should I use SPSS or R?" "Do I need Python?" — students get lost switching tools without clear guidance on the right one for their specific research methodology.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Supervisor Pressure Card */}
+        <motion.div 
+          className="group relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+          whileHover={{ y: -6, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-gray-400 to-gray-300"></div>
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422A12.083 12.083 0 0121 20.083M12 14L5.84 10.578A12.083 12.083 0 003 20.083" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-bold text-gray-900 text-xl leading-tight">Supervisor Pressure</h3>
+                <span className="text-xs font-medium bg-purple-100 text-purple-600 px-2 py-1 rounded-full">Stressful</span>
+              </div>
+              <p className="text-gray-600 text-base leading-relaxed">
+                Constant revisions and unclear feedback leave many students unsure if they're even on the right track with their methodology and analysis approach.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Column 3 */}
+      <div className="space-y-8">
+        {/* Tight Deadlines Card */}
+        <motion.div 
+          className="group relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+          whileHover={{ y: -6, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-gray-400 to-gray-300"></div>
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-bold text-gray-900 text-xl leading-tight">Tight Deadlines</h3>
+                <span className="text-xs font-medium bg-orange-100 text-orange-600 px-2 py-1 rounded-full">Urgent</span>
+              </div>
+              <p className="text-gray-600 text-base leading-relaxed">
+                Many students balance coursework, jobs, and research — leaving little time to analyze data effectively before submission dates become critical.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Fear of Failing Card */}
+        <motion.div 
+          className="group relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+          whileHover={{ y: -6, scale: 1.02 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-gray-400 to-gray-300"></div>
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700 group-hover:text-gray-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a1 1 0 00.86 1.5h18.64a1 1 0 00.86-1.5L13.71 3.86a1 1 0 00-1.72 0z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-bold text-gray-900 text-xl leading-tight">Fear of Failing</h3>
+                <span className="text-xs font-medium bg-pink-100 text-pink-600 px-2 py-1 rounded-full">Anxiety</span>
+              </div>
+              <p className="text-gray-600 text-base leading-relaxed">
+                The stress of defending unclear results or producing weak statistical output causes significant anxiety — making students doubt their research capabilities.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+
+    {/* CTA SECTION - Centered at bottom */}
+    <motion.div 
+      className="text-center mt-16"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+    >
+      <motion.button 
+        className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 to-gray-700 text-white font-bold px-12 py-5 rounded-2xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+        whileHover={{ scale: 1.05, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <span className="relative z-10">Get Personalized Help</span>
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </motion.button>
+    </motion.div>
+  </div>
+
+  {/* Background Elements */}
+  <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-center bg-repeat pointer-events-none" />
+  
+  {/* Floating Elements */}
+  <motion.div 
+    className="absolute top-20 left-10 w-4 h-4 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full opacity-40"
+    animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
+    transition={{ duration: 4, repeat: Infinity }}
+  />
+  <motion.div 
+    className="absolute bottom-20 right-10 w-3 h-3 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full opacity-40"
+    animate={{ y: [0, 15, 0], opacity: [0.2, 0.5, 0.2] }}
+    transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
+  />
+</section>
+{/* Enhanced About Section */}
+<section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-32 overflow-hidden">
+  {/* Enhanced Background Pattern */}
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/geometry.png')] opacity-[0.03] bg-repeat bg-center pointer-events-none" />
+  
+  {/* Floating Elements */}
+  <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-gray-200 to-gray-100 rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
+
+  {/* Enhanced Floating Tagline */}
+  <motion.div 
+    className="absolute top-16 right-12 text-gray-400 text-sm font-medium tracking-wide select-none"
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    — The Solution I Offer —
+  </motion.div>
+
+  <div className="max-w-8xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center relative z-10">
+
+    {/* Left Content - Enhanced */}
+    <div className="space-y-12">
+      {/* Enhanced Intro */}
+      <motion.div 
+        className="space-y-8"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div>
+          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 relative">
+            Hey, I'm{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 relative">
+              TatsTech
+              <div className="absolute -bottom-3 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full"></div>
+            </span>
+          </h2>
+
+          <p className="text-xl text-gray-700 leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm">
+            I'm a <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">Data Analysis Specialist</span>{" "}
+            helping students and professionals transform{" "}
+            <span className="font-bold text-gray-900 underline decoration-2 decoration-gray-300">raw data into actionable insights</span>. 
+            With <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">over a year of hands-on experience</span> in academic and business projects, 
+            I turn complexity into clarity — empowering you to make informed decisions.
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Enhanced How I Help */}
+      <motion.div 
+        className="space-y-6 bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        whileHover={{ y: -5 }}
+      >
+        <div className="flex items-center gap-4 mb-2">
+          <div className="w-12 h-12 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 className="text-3xl font-bold text-gray-900">
+            How I Help
+          </h3>
+        </div>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          From <span className="font-bold text-gray-900">data cleaning and visualization</span> to{" "}
+          <span className="font-bold text-gray-900">advanced analytics and model interpretation</span>, 
+          I offer <span className="font-bold text-gray-900 underline decoration-2 decoration-gray-300">step-by-step project guidance</span> — ensuring 
+          your results are accurate, insightful, and presentation-ready.
+        </p>
+      </motion.div>
+
+      {/* Enhanced Collaboration */}
+      <motion.div 
+        className="space-y-6 bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        whileHover={{ y: -5 }}
+      >
+        <div className="flex items-center gap-4 mb-2">
+          <div className="w-12 h-12 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 className="text-3xl font-bold text-gray-900">
+            Let's Collaborate
+          </h3>
+        </div>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          Ready to transform your dataset into something extraordinary?{" "}
+          <span className="font-bold text-gray-900">Let's connect</span> and 
+          make your research or business story shine with data-driven precision.
+        </p>
+      </motion.div>
+
+      {/* Enhanced Buttons */}
+      <motion.div 
+        className="flex flex-col sm:flex-row gap-6 pt-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <motion.a
+          href="/contact"
+          className="group relative bg-gradient-to-r from-gray-900 to-gray-700 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all duration-300 text-center overflow-hidden"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <span className="relative z-10">Let's Work Together</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        </motion.a>
+        
+        <motion.a
+          href="https://wa.me/263771186558"
+          className="group relative border-2 border-gray-900 text-gray-900 px-10 py-5 rounded-2xl font-bold hover:bg-gray-900 hover:text-white transition-all duration-300 text-center"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp Me
+          </span>
+        </motion.a>
+      </motion.div>
+    </div>
+
+    {/* Right Content - Enhanced */}
+    <motion.div 
+      className="relative"
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+    >
+      {/* Enhanced Image Container */}
+      <div className="relative mb-16 group">
+        {/* Background Glow Effect */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-gray-300 to-gray-200 rounded-3xl blur-3xl scale-105 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+        
+        {/* Main Image with Enhanced Styling */}
+        <div className="relative">
+          <motion.img
+            src="/tatstech.png"
+            alt="TatsTech - Data Analyst"
+            className="w-96 h-[28rem] object-cover rounded-2xl shadow-2xl mx-auto border-2 border-gray-200 group-hover:border-gray-300 transition-all duration-500 group-hover:scale-[1.02]"
+            whileHover={{ y: -10 }}
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+              if (nextElement) {
+                nextElement.style.display = 'flex';
+              }
+            }}
+          />
+          
+          {/* Enhanced Fallback Avatar */}
+          <motion.div 
+            className="w-96 h-[28rem] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-2xl mx-auto items-center justify-center hidden flex-col p-8 border-2 border-gray-200"
+            whileHover={{ y: -10 }}
+          >
+            <div className="w-32 h-32 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+              <span className="text-white text-5xl font-black">T</span>
+            </div>
+            <p className="text-gray-900 text-2xl font-bold mb-2">TatsTech</p>
+            <p className="text-gray-600 text-lg font-medium">Data Analysis Expert</p>
+            <div className="mt-6 w-16 h-1 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full"></div>
+          </motion.div>
+        </div>
+
+        {/* Floating Badge */}
+        <motion.div 
+          className="absolute -top-4 -right-4 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-6 py-3 rounded-2xl font-bold shadow-lg"
+          initial={{ scale: 0, rotate: -10 }}
+          whileInView={{ scale: 1, rotate: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          whileHover={{ scale: 1.1, rotate: 5 }}
+        >
+          Data Analyst
+        </motion.div>
+      </div>
+
+      {/* Enhanced Stats */}
+      <motion.div 
+        className="grid grid-cols-3 gap-8 text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        From unclear supervisor feedback to tight submission deadlines — I’ve seen students face frustration, burnout, and confusion during research analysis. That’s exactly why this service exists — to simplify your academic journey.
-      </motion.p>
-
-      <motion.button 
-        className="group inline-flex items-center gap-2 text-gray-900 font-semibold hover:text-gray-700 transition-colors"
-        whileHover={{ scale: 1.05 }}
-      >
-        Explore Solutions
-        <motion.span
-          animate={{ x: [0, 5, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
+        <motion.div 
+          className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -5 }}
         >
-          ↓
-        </motion.span>
-      </motion.button>
-
-      {/* Subtle Center Glow */}
-      <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur-3xl opacity-40" />
-    </div>
-
-    {/* RIGHT COLUMN */}
-    <div className="space-y-6">
-      {/* Card 4 */}
-      <motion.div 
-        className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-        whileHover={{ y: -4 }}
-      >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-gray-200 bg-white flex items-center justify-center">
-            {/* Supervisor Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0121 20.083M12 14L5.84 10.578A12.083 12.083 0 003 20.083" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-1">Supervisor Pressure</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Constant revisions and unclear feedback leave many students unsure if they’re even on the right track.
-            </p>
-          </div>
-        </div>
+          <div className="text-4xl font-black text-gray-900 mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">1+</div>
+          <div className="text-sm text-gray-600 font-semibold uppercase tracking-wide">Years Experience</div>
+        </motion.div>
+        
+        <motion.div 
+          className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -5 }}
+        >
+          <div className="text-4xl font-black text-gray-900 mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">100+</div>
+          <div className="text-sm text-gray-600 font-semibold uppercase tracking-wide">Projects Completed</div>
+        </motion.div>
+        
+        <motion.div 
+          className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -5 }}
+        >
+          <div className="text-4xl font-black text-gray-900 mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">98%</div>
+          <div className="text-sm text-gray-600 font-semibold uppercase tracking-wide">Client Satisfaction</div>
+        </motion.div>
       </motion.div>
 
-      {/* Card 5 */}
+      {/* Enhanced Expertise Card */}
       <motion.div 
-        className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-        whileHover={{ y: -4 }}
+        className="group bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        whileHover={{ y: -8 }}
       >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-gray-200 bg-white flex items-center justify-center">
-            {/* Clock Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-10 h-10 bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-1">Tight Deadlines</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Many students balance coursework, jobs, and research — leaving little time to analyze data effectively before submission.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Card 6 */}
-      <motion.div 
-        className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-        whileHover={{ y: -4 }}
-      >
-        <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-gray-200 bg-white flex items-center justify-center">
-            {/* Alert Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a1 1 0 00.86 1.5h18.64a1 1 0 00.86-1.5L13.71 3.86a1 1 0 00-1.72 0z" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg leading-snug mb-1">Fear of Failing</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              The stress of defending unclear results or producing weak statistical output causes anxiety — making students doubt their capabilities.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  </div>
-
-  {/* Subtle Pattern Background */}
-  <div className="absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-center bg-repeat pointer-events-none" />
-
-  {/* Floating dots for motion depth */}
-  <div className="absolute top-20 left-12 w-3 h-3 bg-gray-400 rounded-full opacity-30 animate-pulse" />
-  <div className="absolute bottom-28 right-20 w-2 h-2 bg-gray-500 rounded-full opacity-30 animate-pulse delay-1000" />
-  <div className="absolute top-40 right-40 w-4 h-4 bg-gray-600 rounded-full opacity-30 animate-pulse delay-2000" />
-</section>
-
-
-{/* About Section */}
-<section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-28 overflow-hidden">
-  {/* Decorative background pattern */}
-  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/geometry.png')] opacity-[0.05] bg-repeat bg-center pointer-events-none" />
-
-  {/* Floating tagline */}
-  <div className="absolute top-12 right-10 text-gray-300 text-sm italic tracking-wide select-none">
-    — The Solution I Offer —
-  </div>
-
-  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
-
-    {/* Left Content */}
-    <div className="space-y-10">
-      {/* Intro */}
-      <div>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 relative inline-block after:content-[''] after:block after:w-24 after:h-[3px] after:bg-gray-800 after:mt-2">
-          Hey, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500">
-            TatsTech
-          </span>
-        </h2>
-
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I’m a <span className="font-semibold text-gray-900 underline decoration-gray-400">Data Analysis Specialist </span> 
-          helping students and professionals transform <span className="font-semibold text-gray-900">raw data into actionable insights</span>. 
-          With <span className="font-semibold text-gray-900">over a year of hands-on experience</span> in academic and business projects, 
-          I turn complexity into clarity — empowering you to make informed decisions.
-        </p>
-      </div>
-
-      {/* How I Help */}
-      <div className="space-y-4">
-        <h3 className="text-2xl font-semibold text-gray-900 border-l-4 border-gray-800 pl-3">
-          How I Help
-        </h3>
-        <p className="text-gray-700 leading-relaxed">
-          From <span className="font-semibold text-gray-900">data cleaning and visualization</span> to <span className="font-semibold text-gray-900">advanced analytics and model interpretation</span>, 
-          I offer <span className="font-semibold text-gray-900 underline decoration-gray-400">step-by-step project guidance</span> — ensuring 
-          your results are accurate, insightful, and presentation-ready.
-        </p>
-      </div>
-
-      {/* Collaboration */}
-      <div className="space-y-4">
-        <h3 className="text-2xl font-semibold text-gray-900 border-l-4 border-gray-800 pl-3">
-          Let’s Collaborate
-        </h3>
-        <p className="text-gray-700 leading-relaxed">
-          Ready to transform your dataset into something extraordinary?{" "}
-          <span className="font-semibold text-gray-900">Let’s connect</span> and 
-          make your research or business story shine with data-driven precision.
-        </p>
-      </div>
-
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-5 pt-6">
-        <a
-          href="/contact"
-          className="bg-gray-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg text-center"
-        >
-          Let’s Work Together
-        </a>
-        <a
-          href="https://wa.me/263771186558"
-          className="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300 text-center"
-        >
-          WhatsApp Me
-        </a>
-      </div>
-    </div>
-
-    {/* Right Content */}
-    <div className="relative">
-      {/* Image */}
-      <div className="relative mb-12">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-gray-200 to-gray-100 rounded-3xl blur-2xl scale-105 opacity-60"></div>
-        <img
-          src="/tatstech.png"
-          alt="TatsTech - Data Analyst"
-          className="w-80 h-96 object-cover rounded-2xl shadow-2xl mx-auto border border-gray-200"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-            const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
-            if (nextElement) {
-              nextElement.style.display = 'flex';
-            }
-          }}
-        />
-        {/* Fallback Avatar */}
-        <div className="w-80 h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-2xl mx-auto items-center justify-center hidden">
-          <div className="text-center">
-            <div className="w-20 h-20 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <span className="text-white text-3xl font-bold">T</span>
-            </div>
-            <p className="text-gray-800 font-medium">TatsTech</p>
-            <p className="text-gray-500 text-sm">Data Analysis Expert</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-8 text-center">
-        <div className="hover:scale-105 transition-transform">
-          <div className="text-3xl font-extrabold text-gray-900 mb-1">1+</div>
-          <div className="text-sm text-gray-600 font-medium">Years Experience</div>
-        </div>
-        <div className="hover:scale-105 transition-transform">
-          <div className="text-3xl font-extrabold text-gray-900 mb-1">100+</div>
-          <div className="text-sm text-gray-600 font-medium">Projects Completed</div>
-        </div>
-        <div className="hover:scale-105 transition-transform">
-          <div className="text-3xl font-extrabold text-gray-900 mb-1">98%</div>
-          <div className="text-sm text-gray-600 font-medium">Client Satisfaction</div>
-        </div>
-      </div>
-
-      {/* Expertise Card */}
-      <div className="mt-12">
-        <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-          <h4 className="font-semibold text-gray-900 mb-3 underline decoration-gray-400 underline-offset-4">
+          <h4 className="font-bold text-gray-900 text-xl underline decoration-gray-400 underline-offset-4">
             Data Analytics Expertise
           </h4>
-          <p className="text-gray-600 text-sm leading-relaxed">
-            Skilled in <span className="font-semibold text-gray-900">SPSS, Power BI, Python, R, and Excel</span> — 
-            delivering clear, data-driven solutions for academic and professional success.
-          </p>
         </div>
-      </div>
-    </div>
+        <p className="text-gray-600 text-base leading-relaxed">
+          Skilled in <span className="font-semibold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">SPSS, Power BI, Python, R, and Excel</span> — 
+          delivering clear, data-driven solutions for academic and professional success.
+        </p>
+      </motion.div>
+    </motion.div>
   </div>
+
+  {/* Additional Floating Elements */}
+  <motion.div 
+    className="absolute top-1/3 left-1/4 w-3 h-3 bg-gray-400 rounded-full opacity-40"
+    animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
+    transition={{ duration: 3, repeat: Infinity }}
+  />
+  <motion.div 
+    className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-gray-500 rounded-full opacity-40"
+    animate={{ y: [0, 15, 0], opacity: [0.2, 0.5, 0.2] }}
+    transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
+  />
 </section>
+{/* ENHANCED TECHNOLOGY SECTION – MATCHING ABOUT SECTION STYLE */}
+<section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-32 overflow-hidden">
 
+  {/* Enhanced Background Elements */}
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/geometry.png')] opacity-[0.03] bg-repeat bg-center pointer-events-none" />
+  
+  {/* Enhanced Floating Elements */}
+  <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-gray-200 to-gray-100 rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
 
-     {/* TECHNOLOGY SECTION – CLEAN, PROFESSIONAL, & CONSISTENT STYLE */}
-<section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-28 overflow-hidden text-gray-900">
-
-  {/* Subtle Side Tagline (matches About section style) */}
-  <div className="absolute top-10 right-10 text-gray-300 text-sm italic tracking-wide">
+  {/* Enhanced Floating Tagline */}
+  <motion.div 
+    className="absolute top-16 right-12 text-gray-400 text-sm font-medium tracking-wide select-none"
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+  >
     — Technologies I Use —
-  </div>
+  </motion.div>
 
-  {/* Animated Background Blobs */}
-  <div className="absolute inset-0 overflow-hidden">
-    <motion.div 
-      className="absolute top-1/3 left-1/3 w-80 h-80 bg-gray-200/40 rounded-full blur-3xl"
-      animate={{
-        x: [0, 40, 0],
-        y: [0, -30, 0],
-        scale: [1, 1.1, 1],
-      }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-    />
-    <motion.div 
-      className="absolute bottom-1/4 right-1/3 w-[28rem] h-[28rem] bg-gray-300/30 rounded-full blur-3xl"
-      animate={{
-        x: [0, -40, 0],
-        y: [0, 30, 0],
-        scale: [1, 1.15, 1],
-      }}
-      transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-    />
-  </div>
+  <div className="max-w-8xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center relative z-10">
 
-  <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-20 items-center relative z-10">
-
-    {/* LEFT CONTENT */}
+    {/* LEFT CONTENT - Enhanced */}
     <motion.div
-      initial={{ opacity: 0, x: -50 }}
+      initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className="space-y-8"
+      transition={{ duration: 0.7 }}
+      className="space-y-12"
     >
-      <motion.h2 
-        className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-4 relative inline-block after:content-[''] after:block after:w-24 after:h-[3px] after:bg-gray-800 after:mt-2"
+      {/* Enhanced Heading */}
+      <motion.div 
+        className="space-y-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        Technologies I Use for <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-          Powerful Data Analysis
-        </span>
-      </motion.h2>
+        <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 relative">
+          Technologies for{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 relative">
+            Powerful Analysis
+            <div className="absolute -bottom-3 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full"></div>
+          </span>
+        </h2>
 
-      <motion.p 
-        className="text-gray-700 text-lg leading-relaxed max-w-xl"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        I use a combination of <span className="font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4">statistical software</span>, 
-        <span className="font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4"> coding tools</span>, and 
-        <span className="font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4"> visualization platforms</span> 
-        to turn complex datasets into clear, insightful results.  
-        Each tool plays a unique role in delivering structured, evidence-based conclusions.
-      </motion.p>
+        <motion.p 
+          className="text-xl text-gray-700 leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          I use a combination of{" "}
+          <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">
+            statistical software
+          </span>
+          ,{" "}
+          <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">
+            coding tools
+          </span>
+          , and{" "}
+          <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">
+            visualization platforms
+          </span> 
+          {" "}to turn complex datasets into clear, insightful results.  
+          Each tool plays a unique role in delivering structured, evidence-based conclusions.
+        </motion.p>
+      </motion.div>
 
-      {/* Buttons */}
+      {/* Enhanced Buttons */}
       <motion.div 
-        className="flex flex-col sm:flex-row gap-4 pt-6"
+        className="flex flex-col sm:flex-row gap-6 pt-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
-        <Link 
+        <motion.a
           href="/contact"
-          className="bg-gray-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg text-center"
+          className="group relative bg-gradient-to-r from-gray-900 to-gray-700 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all duration-300 text-center overflow-hidden"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
         >
-          Let’s Collaborate
-        </Link>
-        <a
+          <span className="relative z-10">Let's Collaborate</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        </motion.a>
+        
+        <motion.a
           href="#about"
-          className="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300 text-center"
+          className="group relative border-2 border-gray-900 text-gray-900 px-10 py-5 rounded-2xl font-bold hover:bg-gray-900 hover:text-white transition-all duration-300 text-center"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
         >
-          Learn More
-        </a>
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </motion.a>
       </motion.div>
     </motion.div>
 
-    {/* RIGHT CONTENT – Orbiting Tech Icons */}
-    <div className="relative">
-      <div className="relative w-[26rem] h-[26rem] mx-auto">
+    {/* RIGHT CONTENT - Enhanced Orbiting System */}
+    <motion.div 
+      className="relative"
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+    >
+      <div className="relative w-[30rem] h-[30rem] mx-auto">
         
-        {/* Central Node */}
+        {/* Enhanced Central Node */}
         <motion.div 
-          className="absolute inset-0 m-auto w-24 h-24 bg-gradient-to-br from-gray-800 to-gray-600 rounded-2xl flex flex-col items-center justify-center shadow-2xl z-20"
+          className="absolute inset-0 m-auto w-28 h-28 bg-gradient-to-br from-gray-900 to-gray-700 rounded-3xl flex flex-col items-center justify-center shadow-2xl z-20 border-2 border-gray-800"
           animate={{
             rotate: 360,
-            scale: [1, 1.1, 1],
+            scale: [1, 1.05, 1],
           }}
           transition={{
-            rotate: { duration: 22, repeat: Infinity, ease: "linear" },
-            scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+            rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+          }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.3 }
           }}
         >
-          <span className="text-white text-xl font-bold">DA</span>
-          <p className="text-xs text-white/80 font-medium">Data Analyst</p>
+          <span className="text-white text-2xl font-black">DA</span>
+          <p className="text-xs text-white/80 font-semibold mt-1">Data Analyst</p>
         </motion.div>
 
-        {/* Orbiting Technologies */}
+        {/* Enhanced Orbiting Technologies */}
         {[
-          { name: "Python", color: "from-gray-700 to-gray-500", radius: 140, speed: 40 },
-          { name: "R", color: "from-gray-600 to-gray-400", radius: 160, speed: 35 },
-          { name: "SPSS", color: "from-gray-700 to-gray-500", radius: 120, speed: 45 },
-          { name: "Excel", color: "from-gray-600 to-gray-400", radius: 180, speed: 30 },
-          { name: "Power BI", color: "from-gray-700 to-gray-500", radius: 200, speed: 25 },
-          { name: "Tableau", color: "from-gray-600 to-gray-400", radius: 140, speed: 38 },
-          { name: "Jupyter", color: "from-gray-700 to-gray-500", radius: 160, speed: 32 },
-          { name: "Stats", color: "from-gray-600 to-gray-400", radius: 100, speed: 50 },
+          { name: "Python", color: "from-gray-800 to-gray-600", radius: 160, speed: 25, icon: "🐍" },
+          { name: "R", color: "from-gray-700 to-gray-500", radius: 190, speed: 30, icon: "📊" },
+          { name: "SPSS", color: "from-gray-800 to-gray-600", radius: 140, speed: 20, icon: "📈" },
+          { name: "Excel", color: "from-gray-700 to-gray-500", radius: 220, speed: 35, icon: "📋" },
+          { name: "Power BI", color: "from-gray-800 to-gray-600", radius: 240, speed: 40, icon: "📉" },
+          { name: "Tableau", color: "from-gray-700 to-gray-500", radius: 180, speed: 28, icon: "🎨" },
+          { name: "Jupyter", color: "from-gray-800 to-gray-600", radius: 200, speed: 32, icon: "💻" },
+          { name: "Stats", color: "from-gray-700 to-gray-500", radius: 120, speed: 18, icon: "🧮" },
         ].map((tool, i) => (
           <motion.div
             key={i}
-            className={`absolute w-20 h-20 bg-gradient-to-br ${tool.color} rounded-2xl flex flex-col items-center justify-center shadow-lg cursor-pointer`}
+            className={`absolute w-24 h-24 bg-gradient-to-br ${tool.color} rounded-2xl flex flex-col items-center justify-center shadow-xl cursor-pointer border border-gray-600/20 group`}
             animate={{
               x: [
                 Math.cos((i * Math.PI) / 4) * tool.radius,
@@ -1028,116 +1233,184 @@ export default function Home() {
               ease: "linear",
             }}
             whileHover={{
-              scale: 1.25,
+              scale: 1.3,
               zIndex: 40,
-              boxShadow: "0 0 25px rgba(0,0,0,0.2)",
-              transition: { duration: 0.2 },
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+              transition: { duration: 0.3 },
             }}
             style={{
               left: "50%",
               top: "50%",
-              marginLeft: -40,
-              marginTop: -40,
+              marginLeft: -48,
+              marginTop: -48,
             }}
           >
-            <span className="text-white text-lg font-bold">{tool.name[0]}</span>
-            <p className="text-xs text-white/90 font-medium text-center">{tool.name}</p>
+            <span className="text-2xl mb-1 group-hover:scale-110 transition-transform duration-300">{tool.icon}</span>
+            <span className="text-white text-sm font-bold text-center leading-tight">{tool.name}</span>
           </motion.div>
         ))}
+
+        {/* Orbital Rings */}
+        <motion.div 
+          className="absolute inset-0 m-auto w-64 h-64 border-2 border-gray-300/30 rounded-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute inset-0 m-auto w-96 h-96 border-2 border-gray-300/20 rounded-full"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute inset-0 m-auto w-[32rem] h-[32rem] border-2 border-gray-300/10 rounded-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+        />
       </div>
-    </div>
+
+      {/* Enhanced Tech Stats */}
+      <motion.div 
+        className="grid grid-cols-3 gap-8 text-center mt-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <motion.div 
+          className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -5 }}
+        >
+          <div className="text-3xl font-black text-gray-900 mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">8+</div>
+          <div className="text-sm text-gray-600 font-semibold uppercase tracking-wide">Tools Mastered</div>
+        </motion.div>
+        
+        <motion.div 
+          className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -5 }}
+        >
+          <div className="text-3xl font-black text-gray-900 mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">100+</div>
+          <div className="text-sm text-gray-600 font-semibold uppercase tracking-wide">Projects</div>
+        </motion.div>
+        
+        <motion.div 
+          className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+          whileHover={{ scale: 1.05, y: -5 }}
+        >
+          <div className="text-3xl font-black text-gray-900 mb-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">1Y+</div>
+          <div className="text-sm text-gray-600 font-semibold uppercase tracking-wide">Experience</div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   </div>
 
-  {/* Subtle floating dots */}
-  {[...Array(6)].map((_, i) => (
-    <motion.div
-      key={i}
-      className="absolute w-2 h-2 bg-gray-400/40 rounded-full"
-      animate={{
-        x: [0, Math.random() * 100 - 50],
-        y: [0, Math.random() * 80 - 40],
-        opacity: [0, 1, 0],
-      }}
-      transition={{
-        duration: 3 + i,
-        repeat: Infinity,
-        delay: i * 0.4,
-      }}
-      style={{
-        left: `${20 + i * 12}%`,
-        top: `${15 + i * 8}%`,
-      }}
-    />
-  ))}
+  {/* Enhanced Floating Elements */}
+  <motion.div 
+    className="absolute top-1/3 left-1/4 w-3 h-3 bg-gray-400 rounded-full opacity-40"
+    animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
+    transition={{ duration: 3, repeat: Infinity }}
+  />
+  <motion.div 
+    className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-gray-500 rounded-full opacity-40"
+    animate={{ y: [0, 15, 0], opacity: [0.2, 0.5, 0.2] }}
+    transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
+  />
+  <motion.div 
+    className="absolute top-1/2 right-1/4 w-4 h-4 bg-gray-300 rounded-full opacity-30"
+    animate={{ y: [0, -15, 0], opacity: [0.2, 0.4, 0.2] }}
+    transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+  />
 </section>
+{/* ENHANCED ACADEMIC PROGRAMS SECTION - MATCHING STYLE */}
+<section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-32 overflow-hidden">
 
-      <ProcessSection />
+  {/* Enhanced Background Elements */}
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/geometry.png')] opacity-[0.03] bg-repeat bg-center pointer-events-none" />
+  
+  {/* Enhanced Floating Elements */}
+  <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-gray-200 to-gray-100 rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
 
- {/* Academic Programs Section - Refined with Side Tag */}
-<section className="relative bg-gradient-to-b from-gray-50 via-white to-gray-100 py-24 overflow-hidden">
-  {/* Side Tagline (matches About section style) */}
-  <div className="absolute top-10 right-10 text-gray-300 text-sm italic tracking-wide">
+  {/* Enhanced Floating Tagline */}
+  <motion.div 
+    className="absolute top-16 right-12 text-gray-400 text-sm font-medium tracking-wide select-none"
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+  >
     — Academic Excellence —
-  </div>
+  </motion.div>
 
-  {/* Subtle background pattern */}
-  <div className="absolute inset-0 opacity-[0.04] bg-[url('https://www.transparenttextures.com/patterns/geometry.png')] bg-repeat bg-center pointer-events-none" />
-
-  <div className="max-w-6xl mx-auto px-6 relative z-10">
-    {/* Header */}
-    <div className="text-center mb-20">
+  <div className="max-w-8xl mx-auto px-6 relative z-10">
+    {/* Enhanced Header */}
+    <motion.div
+      className="text-center mb-24"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <motion.h2
-        className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 relative inline-block after:content-[''] after:block after:w-24 after:h-[3px] after:bg-gray-800 after:mx-auto after:mt-2"
+        className="text-5xl md:text-6xl font-black text-gray-900 mb-8 relative inline-block"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Academic Programs I’ve <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-500">Worked With</span>
+        Academic Programs I've{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 relative">
+          Worked With
+          <div className="absolute -bottom-3 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full"></div>
+        </span>
       </motion.h2>
 
       <motion.p
-        className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
+        className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        Over the past year, I’ve assisted students and professionals in 
-        <span className="font-semibold text-gray-900"> diverse academic disciplines</span> — 
-        transforming raw data into clear, structured insights that enhance research quality and presentation.
+        Over the past year, I've assisted students and professionals in{" "}
+        <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">
+          diverse academic disciplines
+        </span>{" "}
+        — transforming raw data into clear, structured insights that enhance research quality and presentation.
       </motion.p>
-    </div>
+    </motion.div>
 
-    {/* Programs Grid */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
+    {/* Enhanced Programs Grid */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
       {[
-        { name: "Actuarial Science", description: "Risk modeling & probability" },
-        { name: "Financial Mathematics", description: "Quantitative finance & forecasting" },
-        { name: "Mathematics & Statistics", description: "Pure & applied research" },
-        { name: "Data Science", description: "Machine learning & predictive analytics" },
-        { name: "Business Studies", description: "Market analysis & insights" },
-        { name: "Economics", description: "Econometric & policy modeling" },
-        { name: "Tourism & Hospitality", description: "Industry trend analytics" },
-        { name: "Supply Chain Management", description: "Operational optimization" },
-        { name: "Social Sciences", description: "Survey & demographic studies" },
-        { name: "Physics & Engineering", description: "Experimental data modeling" },
-        { name: "Psychology", description: "Behavioral & cognitive analytics" },
-        { name: "Health Sciences", description: "Clinical & biomedical research" },
+        { name: "Actuarial Science", description: "Risk modeling & probability analysis", icon: "📊" },
+        { name: "Financial Mathematics", description: "Quantitative finance & forecasting", icon: "💹" },
+        { name: "Mathematics & Statistics", description: "Pure & applied research methods", icon: "🧮" },
+        { name: "Data Science", description: "Machine learning & predictive analytics", icon: "🤖" },
+        { name: "Business Studies", description: "Market analysis & strategic insights", icon: "💼" },
+        { name: "Economics", description: "Econometric & policy modeling", icon: "📈" },
+        { name: "Tourism & Hospitality", description: "Industry trend analytics", icon: "🏨" },
+        { name: "Supply Chain Management", description: "Operational optimization", icon: "🚚" },
+        { name: "Social Sciences", description: "Survey & demographic studies", icon: "👥" },
+        { name: "Physics & Engineering", description: "Experimental data modeling", icon: "⚛️" },
+        { name: "Psychology", description: "Behavioral & cognitive analytics", icon: "🧠" },
+        { name: "Health Sciences", description: "Clinical & biomedical research", icon: "🏥" },
       ].map((program, index) => (
         <motion.div
           key={index}
-          className="group bg-white hover:bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 cursor-pointer"
+          className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-100 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.04 }}
-          whileHover={{ y: -3, scale: 1.02 }}
+          transition={{ duration: 0.4, delay: index * 0.05 }}
+          whileHover={{ y: -8, scale: 1.02 }}
         >
-          <div className="flex items-start gap-4">
-            <div className="w-3.5 h-3.5 bg-gray-700 rounded-full mt-1 group-hover:scale-125 transition-transform duration-300"></div>
+          {/* Gradient Border Effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+          
+          <div className="relative flex items-start gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{program.icon}</span>
+            </div>
             <div className="flex-1">
-              <h3 className="text-sm font-semibold text-gray-900 mb-1 group-hover:underline group-hover:decoration-gray-400 group-hover:underline-offset-4 transition-all duration-300">
+              <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:underline group-hover:decoration-2 group-hover:decoration-gray-400 group-hover:underline-offset-4 transition-all duration-300">
                 {program.name}
               </h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+              <p className="text-gray-600 text-base leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
                 {program.description}
               </p>
             </div>
@@ -1146,122 +1419,174 @@ export default function Home() {
       ))}
     </div>
 
-    {/* CTA Section */}
+    {/* Enhanced CTA Section */}
     <motion.div
-      className="relative bg-white rounded-3xl p-10 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+      className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-12 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
+      whileHover={{ y: -5 }}
     >
       <div className="text-center relative z-10">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3 underline decoration-gray-300 underline-offset-4">
-          Don’t See Your Field?
-        </h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
-          I’ve collaborated with researchers across many unique fields. 
-          If your project involves <span className="font-semibold text-gray-900">data analysis, visualization, or interpretation</span>, 
-          I can help you turn your results into something exceptional.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-          >
-            Discuss Your Project
-            <span className="ml-2">→</span>
-          </Link>
-          <button className="inline-flex items-center bg-white hover:bg-gray-50 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-xl font-semibold border border-gray-200 hover:border-gray-300 transition-all duration-300">
-            View Examples
-          </button>
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 underline decoration-2 decoration-gray-400 underline-offset-4">
+            Don't See Your Field?
+          </h3>
         </div>
+        
+        <motion.p
+          className="text-gray-700 text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          I've collaborated with researchers across many unique fields. 
+          If your project involves{" "}
+          <span className="font-bold text-gray-900 bg-gradient-to-r from-gray-100 to-gray-50 px-2 py-1 rounded-lg border border-gray-200">
+            data analysis, visualization, or interpretation
+          </span>
+          , I can help you turn your results into something exceptional.
+        </motion.p>
+        
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-6 justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <motion.a
+            href="/contact"
+            className="group relative bg-gradient-to-r from-gray-900 to-gray-700 text-white px-12 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all duration-300 text-center overflow-hidden"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span className="relative z-10 flex items-center justify-center gap-3">
+              Discuss Your Project
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </motion.a>
+          
+          <motion.button 
+            className="group relative border-2 border-gray-900 text-gray-900 px-12 py-5 rounded-2xl font-bold hover:bg-gray-900 hover:text-white transition-all duration-300 text-center"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span className="relative z-10 flex items-center justify-center gap-3">
+              View Examples
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </span>
+          </motion.button>
+        </motion.div>
       </div>
 
-      {/* Decorative accents */}
-      <div className="absolute top-6 right-6 w-16 h-16 bg-gray-200/30 rounded-full blur-xl"></div>
-      <div className="absolute bottom-6 left-6 w-20 h-20 bg-gray-100/40 rounded-full blur-2xl"></div>
+      {/* Enhanced Decorative Accents */}
+      <div className="absolute top-8 right-8 w-20 h-20 bg-gray-200/30 rounded-full blur-xl"></div>
+      <div className="absolute bottom-8 left-8 w-24 h-24 bg-gray-100/40 rounded-full blur-2xl"></div>
+      <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-gray-400 rounded-full opacity-40 animate-pulse"></div>
     </motion.div>
   </div>
 
-  {/* Subtle background glow */}
-  <div className="absolute top-24 right-20 w-40 h-40 bg-gray-100/50 rounded-full blur-3xl"></div>
+  {/* Enhanced Floating Elements */}
+  <motion.div 
+    className="absolute top-1/3 left-1/4 w-3 h-3 bg-gray-400 rounded-full opacity-40"
+    animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
+    transition={{ duration: 3, repeat: Infinity }}
+  />
+  <motion.div 
+    className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-gray-500 rounded-full opacity-40"
+    animate={{ y: [0, 15, 0], opacity: [0.2, 0.5, 0.2] }}
+    transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
+  />
+  <motion.div 
+    className="absolute top-1/2 right-1/4 w-4 h-4 bg-gray-300 rounded-full opacity-30"
+    animate={{ y: [0, -15, 0], opacity: [0.2, 0.4, 0.2] }}
+    transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+  />
 </section>
+{/* ENHANCED FAQ SECTION – MATCHING STYLE */}
+<section id="faq" className="relative py-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
 
-     {/* FAQ Section – Elegant Grey Design */}
-<section id="faq" className="relative py-28 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
-  {/* Subtle Background Accents */}
-  <div className="absolute inset-0 overflow-hidden">
-    <motion.div 
-      className="absolute top-24 left-1/3 w-72 h-72 bg-gray-200/40 rounded-full blur-3xl"
-      animate={{
-        x: [0, 30, 0],
-        y: [0, -20, 0],
-        scale: [1, 1.1, 1],
-      }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-    />
-    <motion.div 
-      className="absolute bottom-24 right-1/3 w-[22rem] h-[22rem] bg-gray-300/30 rounded-full blur-3xl"
-      animate={{
-        x: [0, -30, 0],
-        y: [0, 20, 0],
-        scale: [1, 1.1, 1],
-      }}
-      transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-    />
-  </div>
+  {/* Enhanced Background Elements */}
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/geometry.png')] opacity-[0.03] bg-repeat bg-center pointer-events-none" />
+  
+  {/* Enhanced Floating Elements */}
+  <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-gray-200 to-gray-100 rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
 
-  <div className="max-w-6xl mx-auto px-6 relative z-10">
-    {/* Header */}
-    <div className="text-center mb-16">
+  <div className="max-w-8xl mx-auto px-6 relative z-10">
+    {/* Enhanced Header */}
+    <motion.div 
+      className="text-center mb-20"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <motion.h2 
-        className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight"
+        className="text-5xl md:text-6xl font-black text-gray-900 mb-8 relative inline-block"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Frequently Asked Questions
+        Frequently Asked{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 relative">
+          Questions
+          <div className="absolute -bottom-3 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 rounded-full"></div>
+        </span>
       </motion.h2>
       <motion.p 
-        className="text-gray-600 text-lg max-w-2xl mx-auto"
+        className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-sm"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         Everything you need to know about working with me — from research support to data analysis and timelines.
       </motion.p>
-    </div>
+    </motion.div>
 
-    {/* Category Tabs */}
+    {/* Enhanced Category Tabs */}
     <motion.div 
-      className="flex flex-wrap justify-center gap-3 mb-12"
+      className="flex flex-wrap justify-center gap-4 mb-16"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       {[
-        { id: 'all', label: 'All' },
+        { id: 'all', label: 'All Questions' },
         { id: 'services', label: 'Services' },
         { id: 'process', label: 'Process' },
         { id: 'pricing', label: 'Pricing' },
         { id: 'technical', label: 'Technical' },
       ].map((tab) => (
-        <button
+        <motion.button
           key={tab.id}
           onClick={() => setActiveCategory(tab.id)}
-          className={`px-5 py-2.5 rounded-full font-medium transition-all duration-300 ${
+          className={`group px-6 py-4 rounded-2xl font-bold transition-all duration-300 ${
             activeCategory === tab.id
-              ? 'bg-gray-900 text-white shadow-md'
-              : 'bg-white border border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50'
+              ? 'bg-gradient-to-r from-gray-900 to-gray-700 text-white shadow-2xl'
+              : 'bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 hover:shadow-lg'
           }`}
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
         >
           {tab.label}
-        </button>
+        </motion.button>
       ))}
     </motion.div>
 
-    {/* FAQ Grid */}
+    {/* Enhanced FAQ Grid */}
     <motion.div 
-      className="grid md:grid-cols-2 gap-6"
+      className="grid md:grid-cols-2 gap-8"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
@@ -1269,69 +1594,93 @@ export default function Home() {
       {[
         {
           question: "What kind of data analysis services do you provide?",
-          answer: "I offer full-scope data analysis including data cleaning, descriptive statistics, inferential tests, regression modeling, visualization, and interpretation for academic and professional research projects.",
+          answer: "I offer comprehensive data analysis services including data cleaning and preparation, descriptive statistics, inferential testing, regression modeling, data visualization, and detailed interpretation. I work with both academic research projects and professional business analytics to help you derive meaningful insights from your data.",
           category: "services",
         },
         {
           question: "Do you help with both qualitative and quantitative studies?",
-          answer: "Yes. I handle both types — quantitative using statistical software (SPSS, R, Python) and qualitative using coding frameworks (NVivo, thematic analysis).",
+          answer: "Yes, I support both qualitative and quantitative research methodologies. For quantitative analysis, I use statistical software like SPSS, R, and Python. For qualitative studies, I assist with coding frameworks, thematic analysis, and data interpretation using appropriate qualitative analysis methods.",
           category: "services",
         },
         {
-          question: "How long does a project usually take?",
-          answer: "Most projects are completed within 7–14 days. Complex research involving multiple models may take up to 3 weeks. I always provide an estimated timeline after reviewing your data and objectives.",
+          question: "How long does a typical project take to complete?",
+          answer: "Project timelines vary based on complexity, but most standard analyses are completed within 7-14 days. More complex projects involving multiple statistical models or large datasets may take up to 3 weeks. I provide a detailed timeline estimate after reviewing your specific requirements and data.",
           category: "process",
         },
         {
-          question: "Can you explain your process briefly?",
-          answer: "I start with a consultation to understand your objectives, followed by data assessment, model setup, statistical testing, and report generation. You receive progress updates and final insights in a professional report format.",
+          question: "Can you walk me through your typical process?",
+          answer: "My process begins with an initial consultation to understand your research objectives and requirements. Then I assess your data quality and structure, set up appropriate analytical models, conduct statistical testing, and generate comprehensive reports with clear interpretations. You'll receive regular progress updates throughout the project.",
           category: "process",
         },
         {
-          question: "What is your pricing structure?",
-          answer: "Pricing is based on project scope, dataset size, and analytical complexity. Basic projects start around $150, with advanced modeling or full thesis support ranging from $400–$800.",
+          question: "What is your pricing structure for data analysis projects?",
+          answer: "Pricing is tailored to each project's specific needs, considering factors like dataset size, analytical complexity, and reporting requirements. Basic analysis projects start around $150, while comprehensive thesis support or advanced modeling typically ranges from $400 to $800. I provide detailed quotes after understanding your project scope.",
           category: "pricing",
         },
         {
-          question: "Do you offer installment payments?",
-          answer: "Yes. For larger projects, I allow 50% upfront and 50% upon completion. I accept PayPal, bank transfer, and secure online payments.",
+          question: "Do you offer payment plans or installment options?",
+          answer: "Yes, I understand that larger projects require financial flexibility. For projects over $300, I offer a 50% upfront payment with the remaining 50% due upon completion. I accept various payment methods including PayPal, bank transfers, and other secure online payment options.",
           category: "pricing",
         },
         {
-          question: "Which tools or software do you use?",
-          answer: "I primarily use Python, R, SPSS, Excel, and Power BI for quantitative analysis — and Jupyter or Tableau for visualization. The choice depends on your data and research requirements.",
+          question: "Which analytical tools and software do you primarily use?",
+          answer: "I'm proficient with a wide range of analytical tools including Python for advanced analytics, R for statistical computing, SPSS for social science research, Excel for basic analysis, and Power BI for visualization. I select the most appropriate tools based on your specific research requirements and data characteristics.",
           category: "technical",
         },
         {
-          question: "Can you handle confidential or academic data securely?",
-          answer: "Absolutely. I maintain strict confidentiality protocols and can sign NDAs. All files are stored and transferred securely through encrypted channels.",
+          question: "How do you ensure the security and confidentiality of my data?",
+          answer: "Data security is my top priority. I implement strict confidentiality protocols, use encrypted file transfer methods, and can sign non-disclosure agreements if required. All client data is stored securely and deleted upon project completion unless otherwise requested.",
           category: "technical",
         },
         {
-          question: "Can you assist with research design or hypothesis formulation?",
-          answer: "Yes, I often assist clients in developing strong research frameworks, hypotheses, and analytical strategies to align with their study objectives.",
+          question: "Can you assist with research design and hypothesis development?",
+          answer: "Absolutely. I frequently help clients develop robust research frameworks, formulate testable hypotheses, and design appropriate analytical strategies. This ensures your study is methodologically sound and aligned with your research objectives from the outset.",
           category: "services",
         },
         {
-          question: "What if I need revisions after delivery?",
-          answer: "I offer up to two free revisions within 10 days after delivery to ensure the results and presentation align with your expectations.",
+          question: "What is your revision policy after project delivery?",
+          answer: "I include up to two rounds of complimentary revisions within 10 days of project delivery. This ensures the final results and presentation fully meet your expectations and requirements. Additional revisions beyond this period are available at a reasonable rate.",
           category: "process",
+        },
+        {
+          question: "Do you provide support for academic writing and thesis preparation?",
+          answer: "While my primary focus is data analysis, I do provide support in interpreting results and preparing the methodology and results sections of academic papers. I help you present your findings clearly and effectively, ensuring they align with academic standards.",
+          category: "services",
+        },
+        {
+          question: "What types of data formats can you work with?",
+          answer: "I can work with various data formats including Excel spreadsheets, CSV files, SPSS files, SQL databases, and survey data from platforms like Google Forms or SurveyMonkey. If you have data in other formats, I'm happy to discuss compatibility and conversion options.",
+          category: "technical",
         },
       ]
         .filter(faq => activeCategory === 'all' || faq.category === activeCategory)
         .map((faq, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
-            whileHover={{ y: -2 }}
+            className="group relative bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-100 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
-            <details className="group">
-              <summary className="flex items-center justify-between p-6 cursor-pointer">
-                <h3 className="text-base font-semibold text-gray-900 group-hover:text-gray-700 transition-colors">
-                  {faq.question}
-                </h3>
+            {/* Gradient Border Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            
+            <details className="group/details">
+              <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover/details:scale-110 transition-transform duration-300 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover/details:text-gray-700 transition-colors leading-relaxed">
+                    {faq.question}
+                  </h3>
+                </div>
                 <svg
-                  className="w-5 h-5 text-gray-400 group-hover:text-gray-700 transition-transform duration-300 group-open:rotate-180"
+                  className="w-6 h-6 text-gray-400 group-hover/details:text-gray-700 transition-transform duration-300 group-open/details:rotate-180 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1339,40 +1688,86 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
-              <div className="px-6 pb-6">
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              <div className="px-8 pb-8">
+                <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-200 rounded-full mb-6"></div>
+                <p className="text-gray-600 text-base leading-relaxed bg-gray-50/50 rounded-2xl p-6 border border-gray-100">
+                  {faq.answer}
+                </p>
               </div>
             </details>
           </motion.div>
         ))}
     </motion.div>
 
-    {/* CTA Card */}
+    {/* Enhanced CTA Card */}
     <motion.div 
-      className="text-center mt-20"
+      className="text-center mt-24"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
     >
-      <div className="bg-white border border-gray-200 rounded-2xl p-10 shadow-sm hover:shadow-md transition-all duration-300 max-w-xl mx-auto">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">
-          Still have questions?
-        </h3>
-        <p className="text-gray-600 mb-6">
-          Let’s discuss your research goals and how I can help you with your analysis.
-        </p>
-        <Link 
-          href="/contact" 
-          className="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg"
-        >
-          Schedule a Free Call
-          <span className="ml-2 text-lg">→</span>
-        </Link>
+      <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-12 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group">
+        {/* Gradient Border Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        
+        <div className="relative z-10">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="w-14 h-14 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 underline decoration-2 decoration-gray-400 underline-offset-4">
+              Still have questions?
+            </h3>
+          </div>
+          <motion.p 
+            className="text-gray-700 text-lg mb-10 max-w-xl mx-auto leading-relaxed"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            Let's discuss your research goals and how I can help you with your analysis.
+          </motion.p>
+          <motion.a
+            href="/contact"
+            className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-12 py-5 rounded-2xl font-bold hover:shadow-2xl transition-all duration-300 overflow-hidden"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span className="relative z-10">Schedule a Free Call</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </motion.a>
+        </div>
+
+        {/* Decorative Accents */}
+        <div className="absolute top-6 right-6 w-20 h-20 bg-gray-200/30 rounded-full blur-xl"></div>
+        <div className="absolute bottom-6 left-6 w-24 h-24 bg-gray-100/40 rounded-full blur-2xl"></div>
       </div>
     </motion.div>
   </div>
-</section>
 
+  {/* Enhanced Floating Elements */}
+  <motion.div 
+    className="absolute top-1/3 left-1/4 w-3 h-3 bg-gray-400 rounded-full opacity-40"
+    animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
+    transition={{ duration: 3, repeat: Infinity }}
+  />
+  <motion.div 
+    className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-gray-500 rounded-full opacity-40"
+    animate={{ y: [0, 15, 0], opacity: [0.2, 0.5, 0.2] }}
+    transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
+  />
+  <motion.div 
+    className="absolute top-1/2 right-1/4 w-4 h-4 bg-gray-300 rounded-full opacity-30"
+    animate={{ y: [0, -15, 0], opacity: [0.2, 0.4, 0.2] }}
+    transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+  />
+</section>
 
 
       <Footer />
