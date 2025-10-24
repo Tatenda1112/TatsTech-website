@@ -2,7 +2,6 @@
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ReactNode } from 'react';
 
 interface ContentRendererProps {
   content: string;
@@ -41,95 +40,95 @@ const ContentRenderer = ({ content, className = "prose prose-lg max-w-none" }: C
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          h1: ({ children }: { children: ReactNode }) => (
+          h1: (props) => (
             <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              {children}
+              {props.children}
             </h1>
           ),
-          h2: ({ children }: { children: ReactNode }) => (
+          h2: (props) => (
             <h2 className="text-3xl font-semibold text-gray-900 mb-4 mt-8 leading-tight">
-              {children}
+              {props.children}
             </h2>
           ),
-          h3: ({ children }: { children: ReactNode }) => (
+          h3: (props) => (
             <h3 className="text-2xl font-semibold text-gray-900 mb-3 mt-6 leading-tight">
-              {children}
+              {props.children}
             </h3>
           ),
-          h4: ({ children }: { children: ReactNode }) => (
+          h4: (props) => (
             <h4 className="text-xl font-semibold text-gray-900 mb-3 mt-5 leading-tight">
-              {children}
+              {props.children}
             </h4>
           ),
-          h5: ({ children }: { children: ReactNode }) => (
+          h5: (props) => (
             <h5 className="text-lg font-semibold text-gray-900 mb-2 mt-4 leading-tight">
-              {children}
+              {props.children}
             </h5>
           ),
-          h6: ({ children }: { children: ReactNode }) => (
+          h6: (props) => (
             <h6 className="text-base font-semibold text-gray-900 mb-2 mt-4 leading-tight">
-              {children}
+              {props.children}
             </h6>
           ),
-          p: ({ children }: { children: ReactNode }) => (
+          p: (props) => (
             <p className="text-gray-700 mb-4 leading-relaxed text-base">
-              {children}
+              {props.children}
             </p>
           ),
-          strong: ({ children }: { children: ReactNode }) => (
+          strong: (props) => (
             <strong className="font-semibold text-gray-900">
-              {children}
+              {props.children}
             </strong>
           ),
-          em: ({ children }: { children: ReactNode }) => (
+          em: (props) => (
             <em className="italic text-gray-700">
-              {children}
+              {props.children}
             </em>
           ),
-          ul: ({ children }: { children: ReactNode }) => (
+          ul: (props) => (
             <ul className="list-disc list-inside mb-4 space-y-2 text-gray-700">
-              {children}
+              {props.children}
             </ul>
           ),
-          ol: ({ children }: { children: ReactNode }) => (
+          ol: (props) => (
             <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-700">
-              {children}
+              {props.children}
             </ol>
           ),
-          li: ({ children }: { children: ReactNode }) => (
+          li: (props) => (
             <li className="text-gray-700 leading-relaxed">
-              {children}
+              {props.children}
             </li>
           ),
-          blockquote: ({ children }: { children: ReactNode }) => (
+          blockquote: (props) => (
             <blockquote className="border-l-4 border-green-500 pl-4 py-2 mb-4 italic text-gray-600 bg-gray-50 rounded-r">
-              {children}
+              {props.children}
             </blockquote>
           ),
-          code: ({ children }: { children: ReactNode }) => (
+          code: (props) => (
             <code className="bg-gray-100 text-red-600 px-2 py-1 rounded text-sm font-mono">
-              {children}
+              {props.children}
             </code>
           ),
-          pre: ({ children }: { children: ReactNode }) => (
+          pre: (props) => (
             <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">
-              {children}
+              {props.children}
             </pre>
           ),
-          a: ({ href, children }: { href?: string; children: ReactNode }) => (
+          a: (props) => (
             <a 
-              href={href} 
+              href={props.href} 
               className="text-green-600 hover:text-green-700 underline font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {children}
+              {props.children}
             </a>
           ),
-          img: ({ src, alt }: { src?: string; alt?: string }) => (
+          img: (props) => (
             <img 
-              src={src} 
-              alt={alt} 
+              src={props.src} 
+              alt={props.alt} 
               className="w-full h-auto rounded-lg shadow-md mb-4"
             />
           )

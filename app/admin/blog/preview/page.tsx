@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ReactNode } from 'react';
 import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
 
 const BlogPreviewPage = () => {
@@ -215,75 +214,75 @@ const BlogPreviewPage = () => {
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h1: ({ children }: { children: ReactNode }) => (
-                      <h1 className="text-3xl font-bold text-gray-900 mt-8 mb-4">{children}</h1>
+                    h1: (props) => (
+                      <h1 className="text-3xl font-bold text-gray-900 mt-8 mb-4">{props.children}</h1>
                     ),
-                    h2: ({ children }: { children: ReactNode }) => (
-                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">{children}</h2>
+                    h2: (props) => (
+                      <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">{props.children}</h2>
                     ),
-                    h3: ({ children }: { children: ReactNode }) => (
-                      <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">{children}</h3>
+                    h3: (props) => (
+                      <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">{props.children}</h3>
                     ),
-                    p: ({ children }: { children: ReactNode }) => (
-                      <p className="text-gray-700 leading-relaxed mb-4">{children}</p>
+                    p: (props) => (
+                      <p className="text-gray-700 leading-relaxed mb-4">{props.children}</p>
                     ),
-                    ul: ({ children }: { children: ReactNode }) => (
-                      <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">{children}</ul>
+                    ul: (props) => (
+                      <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">{props.children}</ul>
                     ),
-                    ol: ({ children }: { children: ReactNode }) => (
-                      <ol className="list-decimal list-inside text-gray-700 mb-4 space-y-2">{children}</ol>
+                    ol: (props) => (
+                      <ol className="list-decimal list-inside text-gray-700 mb-4 space-y-2">{props.children}</ol>
                     ),
-                    blockquote: ({ children }: { children: ReactNode }) => (
+                    blockquote: (props) => (
                       <blockquote className="border-l-4 border-green-500 pl-4 py-2 bg-green-50 text-gray-700 italic mb-4">
-                        {children}
+                        {props.children}
                       </blockquote>
                     ),
-                    code: ({ children, className }: { children: ReactNode; className?: string }) => {
-                      const isInline = !className;
+                    code: (props) => {
+                      const isInline = !props.className;
                       if (isInline) {
                         return (
                           <code className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono">
-                            {children}
+                            {props.children}
                           </code>
                         );
                       }
                       return (
                         <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
-                          <code className="font-mono text-sm">{children}</code>
+                          <code className="font-mono text-sm">{props.children}</code>
                         </pre>
                       );
                     },
-                    a: ({ children, href }: { children: ReactNode; href?: string }) => (
+                    a: (props) => (
                       <a
-                        href={href}
+                        href={props.href}
                         className="text-green-600 hover:text-green-700 underline"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {children}
+                        {props.children}
                       </a>
                     ),
-                    img: ({ src, alt }: { src?: string; alt?: string }) => (
+                    img: (props) => (
                       <img
-                        src={src}
-                        alt={alt}
+                        src={props.src}
+                        alt={props.alt}
                         className="w-full rounded-lg shadow-sm mb-4"
                       />
                     ),
-                    table: ({ children }: { children: ReactNode }) => (
+                    table: (props) => (
                       <div className="overflow-x-auto mb-4">
                         <table className="min-w-full border border-gray-300 rounded-lg">
-                          {children}
+                          {props.children}
                         </table>
                       </div>
                     ),
-                    th: ({ children }: { children: ReactNode }) => (
+                    th: (props) => (
                       <th className="border border-gray-300 px-4 py-2 bg-gray-50 font-semibold text-left">
-                        {children}
+                        {props.children}
                       </th>
                     ),
-                    td: ({ children }: { children: ReactNode }) => (
-                      <td className="border border-gray-300 px-4 py-2">{children}</td>
+                    td: (props) => (
+                      <td className="border border-gray-300 px-4 py-2">{props.children}</td>
                     ),
                   }}
                 >

@@ -321,14 +321,14 @@ export function getBlogPosts(
 // Get all categories
 export function getAllCategories(): string[] {
   const posts = getAllBlogPosts();
-  const categories = [...new Set(posts.map(post => post.category))];
+  const categories = Array.from(new Set(posts.map(post => post.category)));
   return categories.sort();
 }
 
 // Get all tags
 export function getAllTags(): string[] {
   const posts = getAllBlogPosts();
-  const tags = [...new Set(posts.flatMap(post => post.tags))];
+  const tags = Array.from(new Set(posts.flatMap(post => post.tags)));
   return tags.sort();
 }
 
