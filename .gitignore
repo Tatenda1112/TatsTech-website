@@ -2,3 +2,4 @@
 .vercel
 node_modules
 .gitingore
+.env.local
