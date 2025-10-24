@@ -161,83 +161,58 @@ const ProcessSection: React.FC = () => {
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [openFAQs, setOpenFAQs] = useState<number[]>([]);
-
-  // Toggle FAQ function
-  const toggleFAQ = (index: number) => {
-    setOpenFAQs(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
 
   // FAQ data with categories
   const faqData = [
     {
-      question: "What kind of data analysis services do you provide?",
-      answer: "I offer comprehensive data analysis services including data cleaning and preparation, descriptive statistics, inferential testing, regression modeling, data visualization, and detailed interpretation. I work with both academic research projects and professional business analytics to help you derive meaningful insights from your data.",
-      category: "services"
+      question: "What exactly do you do?",
+      answer: "We provide comprehensive statistical analysis services for academic research, including data cleaning, statistical testing, visualization, and interpretation. We help students and researchers turn raw data into meaningful insights for dissertations, theses, and research projects.",
+      category: "general"
     },
     {
-      question: "Do you help with both qualitative and quantitative studies?",
-      answer: "Yes, I support both qualitative and quantitative research methodologies. For quantitative analysis, I use statistical software like SPSS, R, and Python. For qualitative studies, I assist with coding frameworks, thematic analysis, and data interpretation using appropriate qualitative analysis methods.",
-      category: "services"
+      question: "How long does a typical project take?",
+      answer: "Most projects take 1-2 weeks depending on complexity and data size. Simple analyses can be completed in 3-5 days, while complex multi-variable studies may take up to 3 weeks. We'll provide a clear timeline during our initial consultation.",
+      category: "general"
     },
     {
-      question: "How long does a typical project take to complete?",
-      answer: "Project timelines vary based on complexity, but most standard analyses are completed within 7-14 days. More complex projects involving multiple statistical models or large datasets may take up to 3 weeks. I provide a detailed timeline estimate after reviewing your specific requirements and data.",
-      category: "process"
+      question: "What if I don't know exactly what I need?",
+      answer: "That's perfectly normal! We start with a free clarity call to understand your research objectives, examine your data, and recommend the most appropriate analytical approach. We'll guide you through the entire process.",
+      category: "general"
     },
     {
-      question: "Can you walk me through your typical process?",
-      answer: "My process begins with an initial consultation to understand your research objectives and requirements. Then I assess your data quality and structure, set up appropriate analytical models, conduct statistical testing, and generate comprehensive reports with clear interpretations. You'll receive regular progress updates throughout the project.",
-      category: "process"
+      question: "Couldn't I just use AI to analyze my data?",
+      answer: "While AI tools can help with basic analysis, academic research requires proper statistical methodology, interpretation, and validation. We ensure your analysis meets academic standards and provide meaningful insights that AI tools often miss.",
+      category: "general"
     },
     {
-      question: "What is your pricing structure for data analysis projects?",
-      answer: "Pricing is tailored to each project's specific needs, considering factors like dataset size, analytical complexity, and reporting requirements. Basic analysis projects start around $150, while comprehensive thesis support or advanced modeling typically ranges from $400 to $800. I provide detailed quotes after understanding your project scope.",
+      question: "Do you only work with students?",
+      answer: "We work with students, researchers, academics, and professionals across various fields who need reliable statistical analysis. Whether you're working on a dissertation, research paper, or business project, we can help.",
+      category: "general"
+    },
+    {
+      question: "How involved do I need to be?",
+      answer: "We handle all the technical work, but we'll need your input on research objectives, data context, and feedback on preliminary results. Most clients spend 2-3 hours total in consultations throughout the project.",
+      category: "general"
+    },
+    {
+      question: "What statistical software do you use?",
+      answer: "We use industry-standard tools including SPSS, R, Python, and Excel depending on your project requirements. We can also work with your preferred software or institutional requirements.",
+      category: "technical"
+    },
+    {
+      question: "What if my data needs cleaning?",
+      answer: "Data cleaning is included in our service. We'll identify and handle missing values, outliers, and formatting issues. We'll also document all cleaning procedures for transparency and reproducibility.",
+      category: "technical"
+    },
+    {
+      question: "How much do your services cost?",
+      answer: "Pricing depends on project complexity, data size, and timeline. Basic analyses start from $150, while comprehensive dissertation analyses range from $300-800. We provide transparent, upfront pricing with no hidden fees.",
       category: "pricing"
     },
     {
-      question: "Do you offer payment plans or installment options?",
-      answer: "Yes, I understand that larger projects require financial flexibility. For projects over $300, I offer a 50% upfront payment with the remaining 50% due upon completion. I accept various payment methods including PayPal, bank transfers, and other secure online payment options.",
+      question: "Do you offer payment plans?",
+      answer: "Yes! For larger projects over $400, we offer 50% upfront and 50% upon completion. We accept PayPal, bank transfers, and other secure payment methods. Contact us to discuss flexible payment options.",
       category: "pricing"
-    },
-    {
-      question: "Which analytical tools and software do you primarily use?",
-      answer: "I'm proficient with a wide range of analytical tools including Python for advanced analytics, R for statistical computing, SPSS for social science research, Excel for basic analysis, and Power BI for visualization. I select the most appropriate tools based on your specific research requirements and data characteristics.",
-      category: "technical"
-    },
-    {
-      question: "How do you ensure the security and confidentiality of my data?",
-      answer: "Data security is my top priority. I implement strict confidentiality protocols, use encrypted file transfer methods, and can sign non-disclosure agreements if required. All client data is stored securely and deleted upon project completion unless otherwise requested.",
-      category: "technical"
-    },
-    {
-      question: "Can you assist with research design and hypothesis development?",
-      answer: "Absolutely! I frequently help clients develop robust research frameworks, formulate testable hypotheses, and design appropriate analytical strategies. This ensures your study is methodologically sound and aligned with your research objectives from the outset.",
-      category: "services"
-    },
-    {
-      question: "What is your revision policy after project delivery?",
-      answer: "I include up to two rounds of complimentary revisions within 10 days of project delivery. This ensures the final results and presentation fully meet your expectations and requirements. Additional revisions beyond this period are available at a reasonable rate.",
-      category: "process"
-    },
-    {
-      question: "Do you provide support for academic writing and thesis preparation?",
-      answer: "While my primary focus is data analysis, I do provide support in interpreting results and preparing the methodology and results sections of academic papers. I help you present your findings clearly and effectively, ensuring they align with academic standards.",
-      category: "services"
-    },
-    {
-      question: "What types of data formats can you work with?",
-      answer: "I can work with various data formats including Excel spreadsheets, CSV files, SPSS files, SQL databases, and survey data from platforms like Google Forms or SurveyMonkey. If you have data in other formats, I'm happy to discuss compatibility and conversion options.",
-      category: "technical"
-    },
-    {
-      question: "How do I get started with my project?",
-      answer: "Getting started is easy! Simply contact me through the website or email with a brief description of your project and your data. I'll schedule a free consultation to discuss your needs, timeline, and provide a detailed quote. Most projects can begin within 24-48 hours.",
-      category: "process"
     },
     {
       question: "What if I need revisions?",
@@ -264,78 +239,436 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       
-     {/* Hero Section */}
-<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-  {/* Background gradients */}
-  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-green-50"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.1),transparent_60%)] bg-[radial-gradient(circle_at_80%_70%,rgba(34,197,94,0.1),transparent_60%)]"></div>
-
-  {/* Floating ambient lights */}
-  <div className="absolute top-20 left-16 w-64 h-64 bg-blue-300/20 rounded-full blur-3xl animate-pulse"></div>
-  <div className="absolute bottom-20 right-16 w-80 h-80 bg-green-300/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-
-  {/* Content */}
-  <div className="relative z-10 max-w-7xl w-full px-6 md:px-10 flex flex-col lg:flex-row items-center justify-between gap-16 py-20">
-
-    {/* Left Side - Text */}
-    <div className="flex-1 text-center lg:text-left space-y-6 md:space-y-8">
-      <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-green-100 rounded-full text-sm font-medium text-gray-700 shadow-sm">
-        <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-        Professional Data Analytics Assistance
-      </div>
-
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
-        Hire a <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-emerald-500 to-blue-600">Data Analyst</span> 
-        <br className="hidden sm:block" /> for Your Personal Project
-      </h1>
-
-      <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-        If you’re struggling with data analysis for your <span className="font-semibold text-gray-900">project, research, or personal work</span>, 
-        let me be your helper — it’s a nice decision.  
-        I’ll guide you step by step to understand your data, extract insights, and achieve the results you need.
-      </p>
-
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-6">
-        <Link
-          href="/contact"
-          className="group relative bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
-        >
-          <span className="relative z-10">Get Help Now</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-emerald-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </Link>
-
-        <Link
-          href="#about"
-          className="group bg-white/70 backdrop-blur-md text-gray-900 px-10 py-4 rounded-xl font-semibold hover:bg-white transition-all duration-300 border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md flex items-center justify-center"
-        >
-          Learn More
-          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-        </Link>
-      </div>
-    </div>
-
-    {/* Right Side - Visual */}
-    <div className="flex-1 relative flex justify-center lg:justify-end">
-      <div className="relative w-[340px] h-[340px] md:w-[460px] md:h-[460px] rounded-full bg-gradient-to-tr from-green-100 to-blue-100 shadow-2xl overflow-hidden flex items-center justify-center">
-        {/* Inner glow */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 via-green-500/10 to-transparent animate-pulse rounded-full"></div>
-
-        {/* Inner message */}
-        <div className="absolute w-[70%] h-[70%] bg-white/80 backdrop-blur-md border border-white/40 rounded-full shadow-inner flex flex-col items-center justify-center text-center px-6">
-          <h3 className="text-2xl font-bold text-gray-800">Your Data, My Expertise</h3>
-          <p className="text-gray-500 text-sm mt-2">
-            Simple, clear, and reliable data support.
-          </p>
-          <div className="mt-4 w-16 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full animate-pulse"></div>
+      {/* Modern Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, #3b82f6 2px, transparent 2px),
+                             radial-gradient(circle at 75% 75%, #10b981 1px, transparent 1px)`,
+            backgroundSize: '50px 50px',
+            animation: 'float 20s ease-in-out infinite'
+          }}></div>
         </div>
-      </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
+        <div className="absolute top-40 right-32 w-1 h-1 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-purple-500 rounded-full animate-bounce"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-20">
+          
+          {/* Main Content */}
+          <div className="text-center mb-16">
+            {/* Status Badge */}
+            <motion.div 
+              className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full px-4 py-2 text-sm font-medium text-gray-700 mb-8 shadow-sm"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              Available for Data Analysis Projects
+            </motion.div>
 
-      {/* Ambient glows */}
-      <div className="absolute -bottom-6 right-6 w-20 h-20 bg-green-400/10 rounded-full blur-2xl animate-bounce-slow"></div>
-      <div className="absolute -top-6 left-6 w-16 h-16 bg-blue-400/10 rounded-full blur-2xl animate-bounce-slow" style={{animationDelay: '2s'}}></div>
-    </div>
-  </div>
-</section>
+            {/* Main Heading */}
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Turn Your Data Into
+              <br />
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
+                Powerful Insights
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Professional data analysis services for students, researchers, and professionals. 
+              From raw data to publication-ready results in <span className="font-semibold text-gray-900">days, not months</span>.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Link 
+                href="/contact"
+                className="group bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
+              >
+                Start Your Project Today
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link 
+                href="#process"
+                className="group bg-white/80 backdrop-blur-sm text-gray-900 px-8 py-4 rounded-2xl font-semibold hover:bg-white transition-all duration-300 border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md"
+              >
+                See How It Works
+              </Link>
+            </motion.div>
+          </div>
+          
+          {/* Modern Stats Grid */}
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            {[
+              { number: "150+", label: "Projects Completed", color: "text-blue-600" },
+              { number: "98%", label: "Success Rate", color: "text-green-600" },
+              { number: "24h", label: "Average Response", color: "text-purple-600" },
+              { number: "5★", label: "Client Rating", color: "text-yellow-600" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+              >
+                <div className={`text-3xl font-bold ${stat.color} mb-2`}>
+                  {stat.number}
+                </div>
+                <div className="text-sm text-gray-600 font-medium">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Indicators */}
+      <section className="relative py-16 bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Trusted by Students & Professionals</h2>
+            <p className="text-gray-600">From undergraduate projects to PhD dissertations</p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {[
+              { 
+                icon: "🎓", 
+                title: "Academic Excellence", 
+                description: "PhD, Master's, and undergraduate research projects with publication-ready results" 
+              },
+              { 
+                icon: "⚡", 
+                title: "Fast Turnaround", 
+                description: "Most projects completed within 3-7 days without compromising quality" 
+              },
+              { 
+                icon: "🔒", 
+                title: "100% Confidential", 
+                description: "Your data and research remain completely private and secure" 
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-all duration-300"
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+                <div className="mb-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-sm animate-pulse">
+                      <span className="text-white text-xs font-bold animate-glow">✓</span>
+                    </div>
+                    <h3 className="font-bold text-gray-800 text-sm animate-fade-in">Analysis Complete</h3>
+                  </div>
+                  {/* Live status indicator */}
+                  <div className="flex items-center gap-1 mb-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-xs text-gray-600 animate-fade-in">Live Data</span>
+                  </div>
+                </div>
+                
+                {/* Enhanced Animated Mini Chart */}
+                <div className="bg-gradient-to-br from-white/90 to-gray-50/60 rounded-xl p-3 border border-gray-200/40 relative overflow-hidden">
+                  {/* Multiple scanning effects */}
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-chart-scan opacity-80"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent animate-chart-scan opacity-60" style={{animationDelay: '1s'}}></div>
+                  
+                  <div className="flex justify-between items-end h-16 px-1">
+                    <div className="w-3 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t shadow-lg animate-grow-1 animate-bar-pulse" style={{height: '40px', animationDelay: '0.2s'}}></div>
+                    <div className="w-3 bg-gradient-to-t from-green-600 to-green-400 rounded-t shadow-lg animate-grow-2 animate-bar-pulse" style={{height: '35px', animationDelay: '0.4s'}}></div>
+                    <div className="w-3 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t shadow-lg animate-grow-3 animate-bar-pulse" style={{height: '30px', animationDelay: '0.6s'}}></div>
+                    <div className="w-3 bg-gradient-to-t from-green-600 to-green-400 rounded-t shadow-lg animate-grow-4 animate-bar-pulse" style={{height: '45px', animationDelay: '0.8s'}}></div>
+                  </div>
+                  
+                  {/* Enhanced moving data points */}
+                  <div className="absolute top-2 right-2 flex gap-1">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-processing-dots" style={{animationDelay: '1s'}}></div>
+                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-processing-dots" style={{animationDelay: '1.2s'}}></div>
+                  </div>
+                  
+                  {/* Data streaming effect */}
+                  <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent animate-data-stream" style={{animationDelay: '2s'}}></div>
+                  
+                  {/* Animated Mini Stats */}
+                  <div className="mt-2 grid grid-cols-2 gap-2 text-center">
+                    <div className="animate-count-up" style={{animationDelay: '1.2s'}}>
+                      <div className="text-sm font-bold text-blue-600 animate-number-count">150+</div>
+                      <div className="text-xs text-gray-600">Students</div>
+                    </div>
+                    <div className="animate-count-up" style={{animationDelay: '1.4s'}}>
+                      <div className="text-sm font-bold text-green-600 animate-number-count">96.1%</div>
+                      <div className="text-xs text-gray-600">Success</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Animated Floating Mobile Badge */}
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg animate-bounce-slow">
+                <span className="animate-glow">Ready</span>
+              </div>
+              
+              {/* Processing indicators */}
+              <div className="absolute top-1 left-1 flex gap-1">
+                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-sm"></div>
+                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse shadow-sm" style={{animationDelay: '0.3s'}}></div>
+                <div className="w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse shadow-sm" style={{animationDelay: '0.6s'}}></div>
+              </div>
+            </div>
+            
+            {/* Secondary Mobile Visualization - Left Side */}
+            <div className="absolute top-1/3 left-2 sm:left-4 transform -translate-y-1/2 scale-40 sm:scale-60">
+              <div className="bg-gradient-to-br from-white/80 via-purple-50/50 to-blue-50/40 rounded-xl shadow-lg p-3 border border-gray-100/30 backdrop-blur-sm animate-float-2">
+                {/* Mini progress bars */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                    <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full animate-progress-loading" style={{width: '75%'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                    <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full animate-progress-loading" style={{width: '90%', animationDelay: '0.5s'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                    <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full animate-progress-loading" style={{width: '85%', animationDelay: '1s'}}></div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Mini status */}
+                <div className="mt-2 text-center">
+                  <div className="text-xs font-bold text-gray-700 animate-number-flicker">Processing...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Desktop Visualization */}
+          <div className="hidden lg:block relative">
+            <div className="relative">
+              {/* Main Dashboard Mockup */}
+              <div className="relative transform rotate-2 hover:rotate-0 transition-all duration-700 max-w-lg hover:scale-105">
+                
+                {/* Main Analysis Dashboard */}
+                <div className="bg-gradient-to-br from-white via-blue-50/30 to-green-50/30 rounded-3xl shadow-2xl p-8 border border-gray-100/50 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg transform rotate-12">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <h3 className="font-bold text-gray-800 text-lg">Analysis Complete</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-4 mb-6">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700 font-medium">Confidence Level</span>
+                      <span className="font-bold text-blue-600 text-lg">98.5%</span>
+                    </div>
+                  </div>
+                  
+                  {/* Animated Chart Visualization */}
+                  <div className="bg-gradient-to-br from-white via-gray-50/50 to-blue-50/30 rounded-3xl p-6 border border-gray-200/50 shadow-xl relative overflow-hidden">
+                    {/* Scanning line effect */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400/60 to-transparent animate-pulse"></div>
+                    <div className="mb-6">
+                      <h4 className="font-bold text-gray-800 text-lg mb-3">Academic Success by Level</h4>
+                      <div className="flex items-center gap-6 text-sm">
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full"></div>
+                          <span className="text-gray-700 font-medium">Project Success Rate</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full"></div>
+                          <span className="text-gray-700 font-medium">Client Satisfaction</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Animated Bar Chart */}
+                    <div className="relative bg-gradient-to-br from-white to-gray-50/80 rounded-2xl p-4 border border-gray-100/70 overflow-hidden">
+                      {/* Data scanning effect */}
+                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse opacity-70"></div>
+                      
+                      <div className="flex justify-between items-end h-32 px-2">
+                        {/* PhD */}
+                        <div className="flex gap-2 items-end">
+                          <div className="w-6 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg shadow-lg animate-grow-6 animate-bar-pulse hover:shadow-blue-300/50 transition-all duration-300" style={{height: '100px', animationDelay: '0.5s'}}></div>
+                          <div className="w-6 bg-gradient-to-t from-green-600 to-green-400 rounded-t-lg shadow-lg animate-grow-7 animate-bar-pulse hover:shadow-green-300/50 transition-all duration-300" style={{height: '105px', animationDelay: '0.7s'}}></div>
+                        </div>
+                        
+                        {/* Master's */}
+                        <div className="flex gap-2 items-end">
+                          <div className="w-6 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg shadow-lg animate-grow-5 animate-bar-pulse hover:shadow-blue-300/50 transition-all duration-300" style={{height: '85px', animationDelay: '0.9s'}}></div>
+                          <div className="w-6 bg-gradient-to-t from-green-600 to-green-400 rounded-t-lg shadow-lg animate-grow-8 animate-bar-pulse hover:shadow-green-300/50 transition-all duration-300" style={{height: '90px', animationDelay: '1.1s'}}></div>
+                        </div>
+                        
+                        {/* Undergraduate */}
+                        <div className="flex gap-2 items-end">
+                          <div className="w-6 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg shadow-lg animate-grow-4 animate-bar-pulse hover:shadow-blue-300/50 transition-all duration-300" style={{height: '75px', animationDelay: '1.3s'}}></div>
+                          <div className="w-6 bg-gradient-to-t from-green-600 to-green-400 rounded-t-lg shadow-lg animate-grow-1 animate-bar-pulse hover:shadow-green-300/50 transition-all duration-300" style={{height: '82px', animationDelay: '1.5s'}}></div>
+                        </div>
+                        
+                        {/* Research */}
+                        <div className="flex gap-2 items-end">
+                          <div className="w-6 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg shadow-lg animate-grow-2 animate-bar-pulse hover:shadow-blue-300/50 transition-all duration-300" style={{height: '110px', animationDelay: '1.7s'}}></div>
+                          <div className="w-6 bg-gradient-to-t from-green-600 to-green-400 rounded-t-lg shadow-lg animate-grow-3 animate-bar-pulse hover:shadow-green-300/50 transition-all duration-300" style={{height: '115px', animationDelay: '1.9s'}}></div>
+                        </div>
+                      </div>
+                      
+                      {/* Moving data indicators */}
+                      <div className="absolute top-2 right-2 flex gap-1">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '2.2s'}}></div>
+                      </div>
+                      
+                      {/* X-axis labels */}
+                      <div className="flex justify-between mt-4 px-2">
+                        <div className="text-center">
+                          <div className="font-bold text-gray-800 text-xs">PhD</div>
+                          <div className="text-xs text-gray-500 mt-1">98%</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-bold text-gray-800 text-xs">Master's</div>
+                          <div className="text-xs text-gray-500 mt-1">95%</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-bold text-gray-800 text-xs">Undergrad</div>
+                          <div className="text-xs text-gray-500 mt-1">92%</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-bold text-gray-800 text-xs">Research</div>
+                          <div className="text-xs text-gray-500 mt-1">99%</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Animated Summary Stats */}
+                    <div className="mt-4 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-4 border border-gray-200 relative overflow-hidden">
+                      {/* Progress indicator */}
+                      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 animate-progress-loading"></div>
+                      
+                      <div className="grid grid-cols-3 gap-4 text-center">
+                        <div className="animate-count-up" style={{animationDelay: '2.5s'}}>
+                          <div className="text-xl font-bold text-gray-800 animate-number-count">96.1%</div>
+                          <div className="text-xs text-gray-600 font-medium">Overall Success</div>
+                        </div>
+                        <div className="animate-count-up" style={{animationDelay: '2.7s'}}>
+                          <div className="text-xl font-bold text-blue-600 animate-number-count">150+</div>
+                          <div className="text-xs text-gray-600 font-medium">Happy Students</div>
+                        </div>
+                        <div className="animate-count-up" style={{animationDelay: '2.9s'}}>
+                          <div className="text-xl font-bold text-green-600 animate-number-count">99.2%</div>
+                          <div className="text-xs text-gray-600 font-medium">On-Time Delivery</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Animated Floating Success Badge */}
+                <div className="absolute -top-4 -right-6 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-2xl transform rotate-12 hover:rotate-6 transition-all duration-300 hover:scale-110 border border-green-400/20 animate-bounce-slow">
+                  <span className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-green-600 text-xs font-bold animate-glow">✓</span>
+                    </div>
+                    <span className="animate-glow">Defense Ready</span>
+                  </span>
+                </div>
+                
+                {/* Floating Stats Card */}
+                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-white via-blue-50/80 to-purple-50/50 rounded-3xl shadow-2xl p-5 border border-gray-100/70 transform rotate-6 hover:rotate-3 transition-all duration-500 backdrop-blur-sm hover:scale-105">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">150+</div>
+                    <div className="text-xs text-gray-600 font-medium mt-1">Happy Students</div>
+                    <div className="flex justify-center mt-2">
+                      <div className="flex gap-1">
+                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Software Tools Badge */}
+                <div className="absolute top-1/3 -right-6 bg-gradient-to-br from-white via-purple-50/80 to-blue-50/50 rounded-2xl shadow-xl px-4 py-3 border border-gray-100/70 transform -rotate-12 hover:-rotate-6 transition-all duration-500 backdrop-blur-sm hover:scale-105">
+                  <div className="flex gap-3 text-sm font-bold items-center">
+                    <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-lg">SPSS</span>
+                    <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-lg">R</span>
+                    <span className="px-2 py-1 bg-green-100 text-green-700 rounded-lg">Python</span>
+                  </div>
+                  <div className="text-xs text-gray-500 mt-2 text-center font-medium">Statistical Tools</div>
+                </div>
+
+                {/* Processing Indicators */}
+                <div className="absolute top-3 left-3 flex gap-2">
+                  <div className="w-3 h-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full animate-pulse shadow-lg"></div>
+                  <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full animate-pulse shadow-lg" style={{animationDelay: '0.3s'}}></div>
+                  <div className="w-3 h-3 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full animate-pulse shadow-lg" style={{animationDelay: '0.6s'}}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* REVISED STUDENT CHALLENGES SECTION - TOP ALIGNED & DIFFERENT DESIGN */}
 <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-32 overflow-hidden">
@@ -1364,33 +1697,84 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
     >
-      {faqData
+      {[
+        {
+          question: "What kind of data analysis services do you provide?",
+          answer: "I offer comprehensive data analysis services including data cleaning and preparation, descriptive statistics, inferential testing, regression modeling, data visualization, and detailed interpretation. I work with both academic research projects and professional business analytics to help you derive meaningful insights from your data.",
+          category: "services",
+        },
+        {
+          question: "Do you help with both qualitative and quantitative studies?",
+          answer: "Yes, I support both qualitative and quantitative research methodologies. For quantitative analysis, I use statistical software like SPSS, R, and Python. For qualitative studies, I assist with coding frameworks, thematic analysis, and data interpretation using appropriate qualitative analysis methods.",
+          category: "services",
+        },
+        {
+          question: "How long does a typical project take to complete?",
+          answer: "Project timelines vary based on complexity, but most standard analyses are completed within 7-14 days. More complex projects involving multiple statistical models or large datasets may take up to 3 weeks. I provide a detailed timeline estimate after reviewing your specific requirements and data.",
+          category: "process",
+        },
+        {
+          question: "Can you walk me through your typical process?",
+          answer: "My process begins with an initial consultation to understand your research objectives and requirements. Then I assess your data quality and structure, set up appropriate analytical models, conduct statistical testing, and generate comprehensive reports with clear interpretations. You'll receive regular progress updates throughout the project.",
+          category: "process",
+        },
+        {
+          question: "What is your pricing structure for data analysis projects?",
+          answer: "Pricing is tailored to each project's specific needs, considering factors like dataset size, analytical complexity, and reporting requirements. Basic analysis projects start around $150, while comprehensive thesis support or advanced modeling typically ranges from $400 to $800. I provide detailed quotes after understanding your project scope.",
+          category: "pricing",
+        },
+        {
+          question: "Do you offer payment plans or installment options?",
+          answer: "Yes, I understand that larger projects require financial flexibility. For projects over $300, I offer a 50% upfront payment with the remaining 50% due upon completion. I accept various payment methods including PayPal, bank transfers, and other secure online payment options.",
+          category: "pricing",
+        },
+        {
+          question: "Which analytical tools and software do you primarily use?",
+          answer: "I'm proficient with a wide range of analytical tools including Python for advanced analytics, R for statistical computing, SPSS for social science research, Excel for basic analysis, and Power BI for visualization. I select the most appropriate tools based on your specific research requirements and data characteristics.",
+          category: "technical",
+        },
+        {
+          question: "How do you ensure the security and confidentiality of my data?",
+          answer: "Data security is my top priority. I implement strict confidentiality protocols, use encrypted file transfer methods, and can sign non-disclosure agreements if required. All client data is stored securely and deleted upon project completion unless otherwise requested.",
+          category: "technical",
+        },
+        {
+          question: "Can you assist with research design and hypothesis development?",
+          answer: "Absolutely. I frequently help clients develop robust research frameworks, formulate testable hypotheses, and design appropriate analytical strategies. This ensures your study is methodologically sound and aligned with your research objectives from the outset.",
+          category: "services",
+        },
+        {
+          question: "What is your revision policy after project delivery?",
+          answer: "I include up to two rounds of complimentary revisions within 10 days of project delivery. This ensures the final results and presentation fully meet your expectations and requirements. Additional revisions beyond this period are available at a reasonable rate.",
+          category: "process",
+        },
+        {
+          question: "Do you provide support for academic writing and thesis preparation?",
+          answer: "While my primary focus is data analysis, I do provide support in interpreting results and preparing the methodology and results sections of academic papers. I help you present your findings clearly and effectively, ensuring they align with academic standards.",
+          category: "services",
+        },
+        {
+          question: "What types of data formats can you work with?",
+          answer: "I can work with various data formats including Excel spreadsheets, CSV files, SPSS files, SQL databases, and survey data from platforms like Google Forms or SurveyMonkey. If you have data in other formats, I'm happy to discuss compatibility and conversion options.",
+          category: "technical",
+        },
+      ]
         .filter(faq => activeCategory === 'all' || faq.category === activeCategory)
-        .map((faq, index) => {
-          const isOpen = openFAQs.includes(index);
-          return (
-            <motion.div
-              key={index}
-              className="group relative bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-100 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
-              {/* Gradient Border Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-              
-              {/* Clickable Question */}
-              <div
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleFAQ(index);
-                }}
-                className="w-full flex items-center justify-between p-8 cursor-pointer text-left hover:bg-gray-50 transition-all duration-300 relative z-10"
-                style={{ pointerEvents: 'auto' }}
-              >
+        .map((faq, index) => (
+          <motion.div
+            key={index}
+            className="group relative bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-100 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ y: -8, scale: 1.02 }}
+          >
+            {/* Gradient Border Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            
+            <details className="group/details">
+              <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover/details:scale-110 transition-transform duration-300 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1402,31 +1786,23 @@ export default function Home() {
                   </h3>
                 </div>
                 <svg
-                  className={`w-6 h-6 text-gray-400 hover:text-gray-700 transition-all duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                  className="w-6 h-6 text-gray-400 group-hover/details:text-gray-700 transition-transform duration-300 group-open/details:rotate-180 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
+              </summary>
+              <div className="px-8 pb-8">
+                <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-200 rounded-full mb-6"></div>
+                <p className="text-gray-600 text-base leading-relaxed bg-gray-50/50 rounded-2xl p-6 border border-gray-100">
+                  {faq.answer}
+                </p>
               </div>
-              
-              {/* Expandable Answer */}
-              <div 
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="px-8 pb-8">
-                  <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-200 rounded-full mb-6"></div>
-                  <p className="text-gray-600 text-base leading-relaxed bg-gray-50/50 rounded-2xl p-6 border border-gray-100">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          );
-        })}
+            </details>
+          </motion.div>
+        ))}
     </motion.div>
 
     {/* Enhanced CTA Card */}
